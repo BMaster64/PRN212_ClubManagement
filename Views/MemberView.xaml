@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="PRN212_Project.Views.MemberView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PRN212_Project.Views"
+             xmlns:converters="clr-namespace:PRN212_Project.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <converters:UserTypeToRoleConverter x:Key="UserTypeToRoleConverter"/>
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <converters:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter"/>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Member Management" FontSize="24" FontWeight="Bold" Margin="0,0,20,0"/>
+            <Button Content="Add Member" Command="{Binding ShowCreateFormCommand}"
+                    Style="{StaticResource NavButtonStyle}" Width="100" Height="30"/>
+        </StackPanel>
+
+        <!-- Member List -->
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Members}" 
+                  AutoGenerateColumns="False" IsReadOnly="True"
+                  Margin="10" Visibility="{Binding ShowCreateMemberForm, Converter={StaticResource InverseBoolToVisibilityConverter}}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}" Width="*"/>
+                <DataGridTextColumn Header="Role" Binding="{Binding UserType, Converter={StaticResource UserTypeToRoleConverter}}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Create Member Form -->
+        <Grid Grid.Row="1" Margin="10" 
+              Visibility="{Binding ShowCreateMemberForm, Converter={StaticResource BoolToVisibilityConverter}}">
+            <StackPanel Width="400">
+                <TextBlock Text="Create New Member" FontSize="20" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                <TextBlock Text="Name:"/>
+                <TextBox Text="{Binding Name}" Margin="0,5,0,10"/>
+
+                <TextBlock Text="Email:"/>
+                <TextBox Text="{Binding Email}" Margin="0,5,0,10"/>
+
+                <TextBlock Text="Phone:"/>
+                <TextBox Text="{Binding Phone}" Margin="0,5,0,10"/>
+
+                <TextBlock Text="Password:"/>
+                <PasswordBox x:Name="PasswordBox" Margin="0,5,0,10"/>
+
+                <TextBlock Text="User Type:"/>
+                <ComboBox ItemsSource="{Binding AvailableUserTypes}" 
+                         SelectedItem="{Binding SelectedUserType}"
+                         Margin="0,5,0,20">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Converter={StaticResource UserTypeToRoleConverter}}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="Cancel" Command="{Binding CancelCreateCommand}"
+                            Style="{StaticResource NavButtonStyle}" Width="100" Height="30" Margin="0,0,10,0"/>
+                    <Button Content="Create" Command="{Binding CreateMemberCommand}"
+                            Style="{StaticResource NavButtonStyle}" Width="100" Height="30"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

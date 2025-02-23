@@ -1,0 +1,40 @@
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using System.Collections.ObjectModel;
+using System.Windows;
+
+public partial class RegisterViewModel : ObservableObject
+{
+    private readonly AuthService _authService;
+
+    [ObservableProperty] private string name;
+    [ObservableProperty] private string phone;
+    [ObservableProperty] private string email;
+    [ObservableProperty] private string password;
+    [ObservableProperty] private string selectedUserType;
+    [ObservableProperty] private string message;
+
+    public IRelayCommand RegisterCommand { get; }
+    public IRelayCommand NavigateToLoginCommand { get; }
+
+    public event Action? NavigateToLoginRequested;
+
+    public RegisterViewModel(AuthService authService)
+    {
+        _authService = authService;
+        RegisterCommand = new RelayCommand(Register);
+        NavigateToLoginCommand = new RelayCommand(() => NavigateToLoginRequested?.Invoke());
+    }
+
+    private void Register()
+    {
+        if (_authService.Register(Name, Phone, Email, Password))
+        {
+            MessageBox.Show("Registration successful!");
+        }
+        else
+        {
+            Message = "Email already exists!";
+        }
+    }
+}
