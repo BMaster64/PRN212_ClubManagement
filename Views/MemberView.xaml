@@ -31,9 +31,9 @@
                   AutoGenerateColumns="False" IsReadOnly="True"
                   Margin="10" Visibility="{Binding ShowCreateMemberForm, Converter={StaticResource InverseBoolToVisibilityConverter}}">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Student ID" Binding="{Binding StudentId}" Width="*"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
-                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}" Width="*"/>
                 <DataGridTextColumn Header="Role" Binding="{Binding UserType, Converter={StaticResource UserTypeToRoleConverter}}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
@@ -44,14 +44,14 @@
             <StackPanel Width="400">
                 <TextBlock Text="Create New Member" FontSize="20" FontWeight="Bold" Margin="0,0,0,20"/>
 
+                <TextBlock Text="Student ID:"/>
+                <TextBox Text="{Binding StudentId}" Margin="0,5,0,10"/>
+
                 <TextBlock Text="Name:"/>
                 <TextBox Text="{Binding Name}" Margin="0,5,0,10"/>
 
                 <TextBlock Text="Email:"/>
                 <TextBox Text="{Binding Email}" Margin="0,5,0,10"/>
-
-                <TextBlock Text="Phone:"/>
-                <TextBox Text="{Binding Phone}" Margin="0,5,0,10"/>
 
                 <TextBlock Text="Password:"/>
                 <PasswordBox x:Name="PasswordBox" Margin="0,5,0,10"/>

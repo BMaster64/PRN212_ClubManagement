@@ -6,9 +6,15 @@ using System.Windows;
 
 public class AuthService
 {
-    public bool Register(string name, string phone, string email, string password)
+    public bool Register(string studentId, string name, string phone, string email, string password)
     {
         using var db = new DBContext();
+
+        if (db.Users.Any(u => u.StudentId == studentId))
+        {
+            MessageBox.Show("Student ID already registered!", "Registration Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            return false;
+        }
 
         if (db.Users.Any(u => u.Email == email))
             return false; // Email already exists
@@ -16,8 +22,8 @@ public class AuthService
         var hashedPassword = HashPassword(password);
         var user = new User
         {
+            StudentId = studentId,
             Name = name,
-            Phone = phone,
             Email = email,
             Password = hashedPassword,
             UserType = 1
@@ -64,12 +70,6 @@ public class AuthService
     {
         using var db = new DBContext();
         return await db.Users.AnyAsync(u => u.Email == email);
-    }
-
-    public async Task<bool> PhoneExistsAsync(string phone)
-    {
-        using var db = new DBContext();
-        return await db.Users.AnyAsync(u => u.Phone == phone);
     }
 
     public async Task<bool> RegisterAsync(User user)

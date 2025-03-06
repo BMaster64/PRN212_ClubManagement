@@ -21,11 +21,11 @@ public partial class MemberViewModel : ObservableObject
     private ObservableCollection<int> availableUserTypes;
 
     [ObservableProperty]
+    private string studentId;
+    [ObservableProperty]
     private string name;
     [ObservableProperty]
     private string email;
-    [ObservableProperty]
-    private string phone;
     [ObservableProperty]
     private string password;
     [ObservableProperty]
@@ -58,7 +58,7 @@ public partial class MemberViewModel : ObservableObject
 
     private void LoadMembers()
     {
-        var query = _dbContext.Users.Where(u => u.GroupId == _currentUser.GroupId);
+        var query = _dbContext.Users.Where(u => u.ClubId == _currentUser.ClubId);
 
         // If not admin (usertype 1), only show members of lower rank
         if (_currentUser.UserType > 1)
@@ -89,7 +89,6 @@ public partial class MemberViewModel : ObservableObject
     {
         if (string.IsNullOrWhiteSpace(Name) ||
             string.IsNullOrWhiteSpace(Email) ||
-            string.IsNullOrWhiteSpace(Phone) ||
             string.IsNullOrWhiteSpace(Password))
         {
             MessageBox.Show("All fields are required.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -100,10 +99,9 @@ public partial class MemberViewModel : ObservableObject
         {
             Name = Name,
             Email = Email,
-            Phone = Phone,
             Password = Password,
             UserType = SelectedUserType,
-            GroupId = _currentUser.GroupId
+            ClubId = _currentUser.ClubId
         };
 
         try
@@ -114,7 +112,6 @@ public partial class MemberViewModel : ObservableObject
             // Clear form
             Name = "";
             Email = "";
-            Phone = "";
             Password = "";
             ShowCreateMemberForm = false;
 

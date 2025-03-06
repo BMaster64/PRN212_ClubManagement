@@ -41,24 +41,24 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Margin="85,10,69,0" Grid.ColumnSpan="2">
+                    <TextBlock Height="37" Text="Student ID:" Foreground="White" FontWeight="Bold" Margin="0,0,0,5"/>
                     <TextBlock Height="37" Text="Name:" Foreground="White" FontWeight="Bold" Margin="0,0,0,5"/>
-                    <TextBlock Height="37" Text="Email:" Foreground="White" FontWeight="Bold" Margin="0,10,0,5"/>
-                    <TextBlock Height="37" Text="Phone:" Foreground="White" FontWeight="Bold" Margin="0,10,0,5"/>
-                    <TextBlock Height="37" Text="Password:" Foreground="White" FontWeight="Bold" Margin="0,10,0,5"/>
-                    <TextBlock Height="37" Text="Confirm Password:" Foreground="White" FontWeight="Bold" Margin="0,10,0,5"/>
+                    <TextBlock Height="37" Text="Email:" Foreground="White" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBlock Height="37" Text="Password:" Foreground="White" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBlock Height="37" Text="Confirm Password:" Foreground="White" FontWeight="Bold" Margin="0,0,0,5"/>
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Margin="222,0,96,0">
-                    <TextBox x:Name="username" Height="40" Padding="5" BorderBrush="#2C3E50" BorderThickness="1" Margin="0,0,0,10"  Style="{StaticResource LoginTextBox}"/>
-                    <TextBox x:Name="mail" Height="40" Padding="5" BorderBrush="#2C3E50" BorderThickness="1" Margin="0,2,0,10"  Style="{StaticResource LoginTextBox}"/>
-                    <TextBox x:Name="phone" Height="40" Padding="5" BorderBrush="#2C3E50" BorderThickness="1" Margin="0,2,0,10"  Style="{StaticResource LoginTextBox}"/>
-                    <Border CornerRadius="10" Background="White" Width="240" Height="25" Margin="0,10,0,0">
+                    <TextBox x:Name="studentId" Height="40" Padding="5" BorderBrush="#2C3E50" BorderThickness="1" Margin="0,0,0,10" Style="{StaticResource LoginTextBox}"/>
+                    <TextBox x:Name="username" Height="40" Padding="5" BorderBrush="#2C3E50" BorderThickness="1" Margin="0,-8,0,10"  Style="{StaticResource LoginTextBox}"/>
+                    <TextBox x:Name="mail" Height="40" Padding="5" BorderBrush="#2C3E50" BorderThickness="1" Margin="0,-8,0,10"  Style="{StaticResource LoginTextBox}"/>
+                    <Border CornerRadius="10" Background="White" Width="240" Height="25" Margin="0,0,0,0">
                         <Grid>
                             <Rectangle StrokeThickness="1"/>
                             <PasswordBox x:Name="password"  Height="40" BorderThickness="0" Background="Transparent" VerticalAlignment="Center" Margin="10,10,0,0" Foreground="Black" Padding="0,6,0,0"/>
                         </Grid>
                     </Border>
-                    <Border CornerRadius="10" Background="White" Width="240" Height="25" Margin="0,26,0,0" Padding="0">
+                    <Border CornerRadius="10" Background="White" Width="240" Height="25" Margin="0,17,0,0" Padding="0">
                         <Grid>
                             <Rectangle StrokeThickness="1"/>
                             <PasswordBox x:Name="confirmPassword"  Height="40" BorderThickness="0" Background="Transparent" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="Black" Padding="0,11,0,0"/>
@@ -69,7 +69,7 @@
 
             </Grid>
             <Button x:Name="back" Content="Back" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Center" Height="32" Width="84" Background="#FF1D4A4F" FontFamily="Tahoma" FontWeight="Bold" FontSize="14" Foreground="#FFEEE3E3" Click="back_Click" BorderThickness="0"/>
-            <Button x:Name="register" Grid.Row="1" FontSize="18" Content="Register" Background="#2C3E50" Foreground="White" FontWeight="Bold" Margin="20" VerticalAlignment="Bottom" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="160" Height="50"  BorderThickness="0" Click="Button_Click"/>
+            <Button x:Name="register" Grid.Row="1" FontSize="18" Content="Register" Background="#2C3E50" Foreground="White" FontWeight="Bold" Margin="0,278,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="160" Height="50"  BorderThickness="0" Click="Button_Click"/>
         </Grid>
     </Border>
 </Window>

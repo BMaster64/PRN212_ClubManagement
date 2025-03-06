@@ -64,7 +64,7 @@
                     <Button Content="LOGIN" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="10,5" Background="White" Foreground="DeepSkyBlue" Width="100" Click="LoginButton_Click" BorderThickness="0" FontWeight="Bold"/>
                 </Grid>
             </Border>
-            <Button Grid.Row="3" Content="Sign up as customer" Margin="0,82,0,12" HorizontalAlignment="Center" Padding="10,5" Background="#FF338784" Foreground="White" Width="156" Click="Button_Click" BorderThickness="0"/>
+            <Button Grid.Row="3" Content="Register as Club President" Margin="0,82,0,12" HorizontalAlignment="Center" Padding="10,5" Background="#FF338784" Foreground="White" Width="156" Click="Button_Click" BorderThickness="0"/>
         </Grid>
     </Border>
 </Window>

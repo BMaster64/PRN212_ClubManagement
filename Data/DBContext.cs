@@ -9,7 +9,7 @@ public class DBContext : DbContext
         options.UseSqlServer("Server=DESKTOP-7VSQ595\\SQLEXPRESS;uid=lann;password=982Lan;Database=PRNProject;Trusted_Connection=True;TrustServerCertificate=True;");
     }
 
-    public int GetNextGroupId()
+    public int GetNextClubId()
     {
         // If there are no users, start with group 1
         if (!Users.Any())
@@ -18,8 +18,8 @@ public class DBContext : DbContext
         }
 
         // Get the highest GroupId currently in use
-        int maxGroupId = Users.Max(u => u.GroupId);
-        return maxGroupId + 1;
+        int maxClubId = Users.Max(u => u.ClubId);
+        return maxClubId + 1;
     }
 
 }

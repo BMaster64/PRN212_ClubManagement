@@ -7,8 +7,8 @@ public partial class RegisterViewModel : ObservableObject
 {
     private readonly AuthService _authService;
 
+    [ObservableProperty] private string studentId;
     [ObservableProperty] private string name;
-    [ObservableProperty] private string phone;
     [ObservableProperty] private string email;
     [ObservableProperty] private string password;
     [ObservableProperty] private string selectedUserType;
@@ -28,7 +28,16 @@ public partial class RegisterViewModel : ObservableObject
 
     private void Register()
     {
-        if (_authService.Register(Name, Phone, Email, Password))
+        var newUser = new User
+        {
+            StudentId = StudentId,
+            Name = Name,
+            Email = Email,
+            Password = Password,
+            UserType = 1
+        };
+
+        if (_authService.RegisterAsync(newUser).Result)
         {
             MessageBox.Show("Registration successful!");
         }

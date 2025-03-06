@@ -165,6 +165,7 @@ D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project.AssemblyInfoInputs.cache
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project.AssemblyInfo.cs
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project.csproj.CoreCompileInputs.cache
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project.sourcelink.json
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_P.4484E277.Up2Date
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project.dll
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\refint\PRN212_Project.dll

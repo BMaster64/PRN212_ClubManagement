@@ -30,15 +30,15 @@ namespace PRN212_Project.Views
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            string enteredStudentId = studentId.Text;
             string enteredName = username.Text;
             string enteredEmail = mail.Text;
-            string enteredPhone = phone.Text;
             string enteredPassword = password.Password;
             string enteredConfirmPassword = confirmPassword.Password;
 
-            if (string.IsNullOrWhiteSpace(enteredName) ||
+            if (string.IsNullOrEmpty(enteredStudentId) ||
+                string.IsNullOrWhiteSpace(enteredName) ||
                 string.IsNullOrWhiteSpace(enteredEmail) ||
-                string.IsNullOrWhiteSpace(enteredPhone) ||
                 string.IsNullOrWhiteSpace(enteredPassword) ||
                 string.IsNullOrWhiteSpace(enteredConfirmPassword))
             {
@@ -53,22 +53,22 @@ namespace PRN212_Project.Views
             }
 
             // Check if the email or phone already exists
-            if (await _authService.EmailExistsAsync(enteredEmail) || await _authService.PhoneExistsAsync(enteredPhone))
+            if (await _authService.EmailExistsAsync(enteredEmail))
             {
-                MessageBox.Show("Email or Phone Number already exists in the system!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Email already exists in the system!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            int newGroupId = _dbContext.GetNextGroupId();
+            int newClubId = _dbContext.GetNextClubId();
 
             User newUser = new User
             {
+                StudentId = enteredStudentId,
                 Name = enteredName,
                 Email = enteredEmail,
-                Phone = enteredPhone,
                 Password = enteredPassword, // TODO: Hash the password before storing
                 UserType = 1, // Default to "Chủ nhiệm"
-                GroupId = newGroupId
+                ClubId = newClubId
             };
 
             bool isRegistered = await _authService.RegisterAsync(newUser);
