@@ -25,6 +25,8 @@ CREATE TABLE [User] (
 
     CONSTRAINT FK_User_Club FOREIGN KEY (ClubId) REFERENCES Club(ClubId)
 );
+ALTER TABLE [User]  
+ADD Status BIT NOT NULL DEFAULT 1;  
 
 -- Create Event Table
 CREATE TABLE Event (
