@@ -28,14 +28,20 @@ namespace PRN212_Project.Views
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            string enteredEmail = email.Text;
+            string enteredUsername = username.Text;
             string enteredPassword = password.Password;
 
-            var user = _authService.Login(enteredEmail, enteredPassword);
+            if (string.IsNullOrWhiteSpace(enteredUsername) || string.IsNullOrWhiteSpace(enteredPassword))
+            {
+                MessageBox.Show("Username and password are required", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            var user = _authService.Login(enteredUsername, enteredPassword);
 
             if (user != null)
             {
-                string role = user.UserType switch
+                string role = user.RoleId switch
                 {
                     1 => "Chủ nhiệm",
                     2 => "Phó chủ nhiệm",
@@ -47,12 +53,11 @@ namespace PRN212_Project.Views
                 HomeView home = new HomeView();
                 home.DataContext = new HomeViewModel(user);
                 home.Show();
-
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Invalid email or password", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Invalid username or password", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

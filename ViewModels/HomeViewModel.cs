@@ -32,7 +32,7 @@ public class HomeViewModel : INotifyPropertyChanged
         CurrentView = new NotificationView();
 
         // Only show Report tab for UserType 1, 2, or 3
-        ReportTabVisibility = (currentUser.UserType >= 1 && currentUser.UserType <= 3)
+        ReportTabVisibility = (currentUser.RoleId >= 1 && currentUser.RoleId <= 3)
             ? Visibility.Visible
             : Visibility.Collapsed;
 

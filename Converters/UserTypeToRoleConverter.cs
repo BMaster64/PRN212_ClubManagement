@@ -8,9 +8,9 @@ namespace PRN212_Project.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value is int userType)
+            if (value is int roleId)
             {
-                return userType switch
+                return roleId switch
                 {
                     1 => "Chủ nhiệm",
                     2 => "Phó chủ nhiệm",

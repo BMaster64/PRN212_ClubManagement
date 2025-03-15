@@ -8,8 +8,8 @@ public partial class RegisterViewModel : ObservableObject
     private readonly AuthService _authService;
 
     [ObservableProperty] private string studentId;
-    [ObservableProperty] private string name;
-    [ObservableProperty] private string email;
+    [ObservableProperty] private string fullname;
+    [ObservableProperty] private string username;
     [ObservableProperty] private string password;
     [ObservableProperty] private string selectedUserType;
     [ObservableProperty] private string message;
@@ -22,28 +22,28 @@ public partial class RegisterViewModel : ObservableObject
     public RegisterViewModel(AuthService authService)
     {
         _authService = authService;
-        RegisterCommand = new RelayCommand(Register);
+        RegisterCommand = new AsyncRelayCommand(Register);
         NavigateToLoginCommand = new RelayCommand(() => NavigateToLoginRequested?.Invoke());
     }
 
-    private void Register()
+    private async Task Register()
     {
         var newUser = new User
         {
             StudentId = StudentId,
-            Name = Name,
-            Email = Email,
+            FullName = Fullname,
+            Username = Username,
             Password = Password,
-            UserType = 1
+            RoleId = 1
         };
 
-        if (_authService.RegisterAsync(newUser).Result)
+        if (await _authService.RegisterAsync(newUser))
         {
-            MessageBox.Show("Registration successful!");
+            MessageBox.Show("Registration successful as Club President!");
         }
         else
         {
-            Message = "Email already exists!";
+            Message = "Registration failed. Username or Student ID might already exist.";
         }
     }
 }

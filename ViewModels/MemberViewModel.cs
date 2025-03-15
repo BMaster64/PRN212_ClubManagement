@@ -23,16 +23,17 @@ public partial class MemberViewModel : ObservableObject
     [ObservableProperty]
     private string studentId;
     [ObservableProperty]
-    private string name;
+    private string fullname;
     [ObservableProperty]
-    private string email;
+    private string username;
     [ObservableProperty]
     private string password;
     [ObservableProperty]
     private int selectedUserType;
     [ObservableProperty]
     private bool showCreateMemberForm;
-
+    [ObservableProperty]
+    private bool canAddMembers;
     public IRelayCommand LoadMembersCommand { get; }
     public IRelayCommand CreateMemberCommand { get; }
     public IRelayCommand ShowCreateFormCommand { get; }
@@ -45,10 +46,24 @@ public partial class MemberViewModel : ObservableObject
         _dbContext = new DBContext();
         Members = new ObservableCollection<User>();
         AvailableUserTypes = new ObservableCollection<int>();
+        CanAddMembers = _currentUser.RoleId <= 3;
 
         LoadMembersCommand = new RelayCommand(LoadMembers);
         CreateMemberCommand = new RelayCommand(CreateMember);
-        ShowCreateFormCommand = new RelayCommand(() => ShowCreateMemberForm = true);
+        ShowCreateFormCommand = new RelayCommand(() =>
+        {
+            if (CanAddMembers)
+            {
+                ShowCreateMemberForm = true;
+            }
+            else
+            {
+                MessageBox.Show("You don't have permission to add members.",
+                    "Permission Denied",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning);
+            }
+        });
         CancelCreateCommand = new RelayCommand(() => ShowCreateMemberForm = false);
 
         // Initialize by loading members
@@ -58,12 +73,13 @@ public partial class MemberViewModel : ObservableObject
 
     private void LoadMembers()
     {
-        var query = _dbContext.Users.Where(u => u.ClubId == _currentUser.ClubId);
+        var query = _dbContext.Users
+            .Where(u => u.ClubId == _currentUser.ClubId && u.Status == true); // Only active members
 
         // If not admin (usertype 1), only show members of lower rank
-        if (_currentUser.UserType > 1)
+        if (_currentUser.RoleId > 1)
         {
-            query = query.Where(u => u.UserType > _currentUser.UserType);
+            query = query.Where(u => u.RoleId > _currentUser.RoleId);
         }
 
         var membersList = query.ToList();
@@ -79,7 +95,7 @@ public partial class MemberViewModel : ObservableObject
     {
         AvailableUserTypes.Clear();
         // Add available user types based on current user's type
-        for (int i = _currentUser.UserType + 1; i <= 4; i++)
+        for (int i = _currentUser.RoleId + 1; i <= 4; i++)
         {
             AvailableUserTypes.Add(i);
         }
@@ -87,8 +103,9 @@ public partial class MemberViewModel : ObservableObject
 
     private void CreateMember()
     {
-        if (string.IsNullOrWhiteSpace(Name) ||
-            string.IsNullOrWhiteSpace(Email) ||
+        if (string.IsNullOrWhiteSpace(StudentId) ||
+            string.IsNullOrWhiteSpace(Fullname) ||
+            string.IsNullOrWhiteSpace(Username) ||
             string.IsNullOrWhiteSpace(Password))
         {
             MessageBox.Show("All fields are required.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -97,11 +114,14 @@ public partial class MemberViewModel : ObservableObject
 
         var newUser = new User
         {
-            Name = Name,
-            Email = Email,
+            StudentId = StudentId,
+            FullName = Fullname,
+            Username = Username,
             Password = Password,
-            UserType = SelectedUserType,
-            ClubId = _currentUser.ClubId
+            RoleId = SelectedUserType,
+            ClubId = _currentUser.ClubId,
+            CreatedAt = DateTime.Now,
+            Status = true
         };
 
         try
@@ -110,8 +130,9 @@ public partial class MemberViewModel : ObservableObject
             MessageBox.Show("Member created successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
             // Clear form
-            Name = "";
-            Email = "";
+            StudentId = "";
+            Fullname = "";
+            Username = "";
             Password = "";
             ShowCreateMemberForm = false;
 

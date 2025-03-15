@@ -40,8 +40,8 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="Email:" VerticalAlignment="Center" Foreground="White" FontSize="15"/>
-                <TextBox x:Name="email" Grid.Column="1" VerticalAlignment="Center" Margin="53,0,30,0" Style="{StaticResource LoginTextBox}"/>
+                <TextBlock Text="Username:" VerticalAlignment="Center" Foreground="White" FontSize="15"/>
+                <TextBox x:Name="username" Grid.Column="1" VerticalAlignment="Top" Margin="22,-3,29,0" Style="{StaticResource LoginTextBox}"/>
             </Grid>
 
             <!-- Password -->

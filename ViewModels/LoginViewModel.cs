@@ -6,7 +6,7 @@ public partial class LoginViewModel : ObservableObject
 {
     private readonly AuthService _authService;
 
-    [ObservableProperty] private string email;
+    [ObservableProperty] private string username;
     [ObservableProperty] private string password;
     [ObservableProperty] private string message;
 
@@ -24,10 +24,10 @@ public partial class LoginViewModel : ObservableObject
 
     private void Login()
     {
-        var user = _authService.Login(Email, Password);
+        var user = _authService.Login(Username, Password);
         if (user != null)
         {
-            MessageBox.Show($"Login successful!\nYour role ID: {user.UserType}");
+            MessageBox.Show($"Login successful!\nYour role ID: {user.RoleId}");
         }
         else
         {

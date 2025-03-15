@@ -31,18 +31,20 @@ namespace PRN212_Project.Views
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             string enteredStudentId = studentId.Text;
-            string enteredName = username.Text;
-            string enteredEmail = mail.Text;
+            string enteredFullName = fullname.Text;
+            string enteredUsername = username.Text;
             string enteredPassword = password.Password;
             string enteredConfirmPassword = confirmPassword.Password;
+            string enteredClubName = clubName.Text;
 
             if (string.IsNullOrEmpty(enteredStudentId) ||
-                string.IsNullOrWhiteSpace(enteredName) ||
-                string.IsNullOrWhiteSpace(enteredEmail) ||
+                string.IsNullOrWhiteSpace(enteredFullName) ||
+                string.IsNullOrWhiteSpace(enteredUsername) ||
                 string.IsNullOrWhiteSpace(enteredPassword) ||
-                string.IsNullOrWhiteSpace(enteredConfirmPassword))
+                string.IsNullOrWhiteSpace(enteredConfirmPassword) ||
+                string.IsNullOrWhiteSpace(enteredClubName))
             {
-                MessageBox.Show("All fields are required.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("All required fields must be filled out.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -52,30 +54,43 @@ namespace PRN212_Project.Views
                 return;
             }
 
-            // Check if the email or phone already exists
-            if (await _authService.EmailExistsAsync(enteredEmail))
+            // Check if the username or student ID already exists
+            if (await _authService.UsernameExistsAsync(enteredUsername))
             {
-                MessageBox.Show("Email already exists in the system!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Username already exists in the system!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            int newClubId = _dbContext.GetNextClubId();
+            if (await _authService.StudentIdExistsAsync(enteredStudentId))
+            {
+                MessageBox.Show("Student ID already exists in the system!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
+            // Create club object
+            var newClub = new Club
+            {
+                ClubName = enteredClubName
+            };
+
+            // Create user object
             User newUser = new User
             {
                 StudentId = enteredStudentId,
-                Name = enteredName,
-                Email = enteredEmail,
-                Password = enteredPassword, // TODO: Hash the password before storing
-                UserType = 1, // Default to "Chủ nhiệm"
-                ClubId = newClubId
+                FullName = enteredFullName,
+                Username = enteredUsername,
+                Password = enteredPassword,
+                RoleId = 1, // Club President
+                CreatedAt = DateTime.Now,
+                Status = true // Set default status to active
             };
 
-            bool isRegistered = await _authService.RegisterAsync(newUser);
+            // Register user with new club
+            bool isRegistered = await _authService.RegisterWithClubAsync(newUser, newClub);
 
             if (isRegistered)
             {
-                MessageBox.Show("Registration successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"Registration successful! You are now the president of {enteredClubName}.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                 LoginView loginView = new LoginView();
                 loginView.Show();
                 this.Close();

@@ -6,53 +6,36 @@ using System.Windows;
 
 public class AuthService
 {
-    public bool Register(string studentId, string name, string phone, string email, string password)
+    public User? Login(string username, string password)
     {
         using var db = new DBContext();
 
-        if (db.Users.Any(u => u.StudentId == studentId))
+        try
         {
-            MessageBox.Show("Student ID already registered!", "Registration Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            return false;
+            // First get the user without including Club to check credentials
+            var user = db.Users.FirstOrDefault(u => u.Username == username && u.Status);
+
+            if (user == null || !VerifyPassword(password, user.Password))
+                return null;
+
+
+            string role = user.RoleId switch
+            {
+                1 => "Chủ nhiệm",
+                2 => "Phó chủ nhiệm",
+                3 => "Trưởng ban",
+                4 => "Thành viên",
+                _ => "Unknown"
+            };
+
+            MessageBox.Show($"Login successful!\nRole: {role}");
+            return user;
         }
-
-        if (db.Users.Any(u => u.Email == email))
-            return false; // Email already exists
-
-        var hashedPassword = HashPassword(password);
-        var user = new User
+        catch (Exception ex)
         {
-            StudentId = studentId,
-            Name = name,
-            Email = email,
-            Password = hashedPassword,
-            UserType = 1
-        };
-
-        db.Users.Add(user);
-        db.SaveChanges();
-        return true;
-    }
-
-    public User? Login(string email, string password)
-    {
-        using var db = new DBContext();
-
-        var user = db.Users.FirstOrDefault(u => u.Email == email);
-        if (user == null || !VerifyPassword(password, user.Password))
+            MessageBox.Show($"Login error: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             return null;
-
-        string role = user.UserType switch
-        {
-            1 => "Chủ nhiệm",
-            2 => "Phó chủ nhiệm",
-            3 => "Trưởng ban",
-            4 => "Thành viên",
-            _ => "Unknown"
-        };
-
-        MessageBox.Show($"Login successful!\nRole: {role}");
-        return user;
+        }
     }
 
     private static string HashPassword(string password)
@@ -66,10 +49,47 @@ public class AuthService
     {
         return HashPassword(enteredPassword) == storedHash;
     }
-    public async Task<bool> EmailExistsAsync(string email)
+
+    public async Task<bool> UsernameExistsAsync(string username)
     {
         using var db = new DBContext();
-        return await db.Users.AnyAsync(u => u.Email == email);
+        return await db.Users.AnyAsync(u => u.Username == username);
+    }
+
+    public async Task<bool> StudentIdExistsAsync(string studentId)
+    {
+        using var db = new DBContext();
+        return await db.Users.AnyAsync(u => u.StudentId == studentId);
+    }
+
+    public async Task<bool> RegisterWithClubAsync(User user, Club club)
+    {
+        using var db = new DBContext();
+        using var transaction = await db.Database.BeginTransactionAsync();
+
+        try
+        {
+            // First, create the club
+            db.Clubs.Add(club);
+            await db.SaveChangesAsync();
+
+            // Set the user's ClubId to the newly created club's ID
+            user.ClubId = club.ClubId;
+            user.Password = HashPassword(user.Password); // Hash the password before saving
+            user.Status = true;
+
+            // Now add the user
+            db.Users.Add(user);
+            await db.SaveChangesAsync();
+
+            await transaction.CommitAsync();
+            return true;
+        }
+        catch
+        {
+            await transaction.RollbackAsync();
+            return false;
+        }
     }
 
     public async Task<bool> RegisterAsync(User user)
@@ -88,4 +108,3 @@ public class AuthService
         }
     }
 }
-
