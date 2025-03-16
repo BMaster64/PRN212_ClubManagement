@@ -16,7 +16,7 @@
 
         <!-- Left Navigation Bar -->
         <DockPanel Width="200" Background="#2C3E50" Margin="0,0,700,0">
-            <StackPanel VerticalAlignment="Top" Margin="10">
+            <StackPanel Margin="10" Height="582">
                 <TextBlock Text="Navigation" FontSize="28" FontWeight="Bold" Foreground="White" Margin="10"/>
 
                 <Button Content="Notification" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Notification'/>
@@ -24,6 +24,7 @@
                 <Button Content="Event" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Event'/>
                 <Button Content="Chat" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Chat'/>
                 <Button Content="Report" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Report' Visibility="{Binding ReportTabVisibility}"/>
+                <Button Content="Log Out" Style="{StaticResource NavButtonStyle}" Click="LogOutButton_Click" Margin="20, 330, 20, 0" Background="DarkRed"/>
             </StackPanel>
         </DockPanel>
 

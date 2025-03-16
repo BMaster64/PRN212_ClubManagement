@@ -35,5 +35,12 @@ namespace PRN212_Project.Views
         {
             this.Close();
         }
+
+        private void LogOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            LoginView login = new LoginView();
+            login.Show();
+            this.Close();
+        }
     }
 }

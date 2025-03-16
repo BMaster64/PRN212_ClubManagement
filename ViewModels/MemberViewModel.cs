@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -21,6 +22,12 @@ public partial class MemberViewModel : ObservableObject
     private ObservableCollection<int> availableUserTypes;
 
     [ObservableProperty]
+    private bool isEditing;
+
+    [ObservableProperty]
+    private User selectedMember;
+
+    [ObservableProperty]
     private string studentId;
     [ObservableProperty]
     private string fullname;
@@ -34,11 +41,14 @@ public partial class MemberViewModel : ObservableObject
     private bool showCreateMemberForm;
     [ObservableProperty]
     private bool canAddMembers;
-    public IRelayCommand LoadMembersCommand { get; }
-    public IRelayCommand CreateMemberCommand { get; }
+    public IAsyncRelayCommand LoadMembersCommand { get; }
+    public IAsyncRelayCommand CreateMemberCommand { get; }
     public IRelayCommand ShowCreateFormCommand { get; }
     public IRelayCommand CancelCreateCommand { get; }
-
+    public IRelayCommand<User> EditMemberCommand { get; }
+    public IAsyncRelayCommand<User> DeleteMemberCommand { get; }
+    public IAsyncRelayCommand SaveEditCommand { get; }
+    public IRelayCommand CancelEditCommand { get; }
     public MemberViewModel(User currentUser)
     {
         _currentUser = currentUser;
@@ -48,8 +58,8 @@ public partial class MemberViewModel : ObservableObject
         AvailableUserTypes = new ObservableCollection<int>();
         CanAddMembers = _currentUser.RoleId <= 3;
 
-        LoadMembersCommand = new RelayCommand(LoadMembers);
-        CreateMemberCommand = new RelayCommand(CreateMember);
+        LoadMembersCommand = new AsyncRelayCommand(LoadMembersAsync);
+        CreateMemberCommand = new AsyncRelayCommand(CreateMemberAsync);
         ShowCreateFormCommand = new RelayCommand(() =>
         {
             if (CanAddMembers)
@@ -65,24 +75,22 @@ public partial class MemberViewModel : ObservableObject
             }
         });
         CancelCreateCommand = new RelayCommand(() => ShowCreateMemberForm = false);
+        EditMemberCommand = new RelayCommand<User>(OnEditMember);
+        DeleteMemberCommand = new AsyncRelayCommand<User>(DisableMemberAsync);
+        SaveEditCommand = new AsyncRelayCommand(SaveEditAsync);
+        CancelEditCommand = new RelayCommand(CancelEdit);
 
         // Initialize by loading members
-        LoadMembers();
+        LoadMembersAsync();
         SetAvailableUserTypes();
     }
 
-    private void LoadMembers()
+    private async Task LoadMembersAsync()
     {
         var query = _dbContext.Users
-            .Where(u => u.ClubId == _currentUser.ClubId && u.Status == true); // Only active members
+            .Where(u => u.ClubId == _currentUser.ClubId && u.Status == true);
 
-        // If not admin (usertype 1), only show members of lower rank
-        if (_currentUser.RoleId > 1)
-        {
-            query = query.Where(u => u.RoleId > _currentUser.RoleId);
-        }
-
-        var membersList = query.ToList();
+        var membersList = await query.ToListAsync();
 
         Members.Clear();
         foreach (var member in membersList)
@@ -101,7 +109,7 @@ public partial class MemberViewModel : ObservableObject
         }
     }
 
-    private void CreateMember()
+    private async Task CreateMemberAsync()
     {
         if (string.IsNullOrWhiteSpace(StudentId) ||
             string.IsNullOrWhiteSpace(Fullname) ||
@@ -126,7 +134,8 @@ public partial class MemberViewModel : ObservableObject
 
         try
         {
-            _authService.RegisterAsync(newUser).Wait();
+            // Use await instead of .Wait()
+            await _authService.RegisterAsync(newUser);
             MessageBox.Show("Member created successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
             // Clear form
@@ -137,11 +146,130 @@ public partial class MemberViewModel : ObservableObject
             ShowCreateMemberForm = false;
 
             // Reload members list
-            LoadMembers();
+            LoadMembersAsync();
         }
         catch (Exception ex)
         {
             MessageBox.Show($"Error creating member: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
+    private void OnEditMember(User member)
+    {
+        if (member == null) return;
+
+        if (member.RoleId <= _currentUser.RoleId)
+        {
+            MessageBox.Show("You don't have permission to edit this user.",
+                "Permission Denied", MessageBoxButton.OK, MessageBoxImage.Warning);
+            return;
+        }
+        // Set selected member for editing
+        SelectedMember = member;
+
+        // Copy member data to form fields
+        StudentId = member.StudentId;
+        Fullname = member.FullName;
+        Username = member.Username;
+        Password = ""; // Don't show current password for security
+        SelectedUserType = member.RoleId;
+
+        // Show edit form
+        IsEditing = true;
+        ShowCreateMemberForm = true; // We'll reuse the same form layout
+    }
+    private void CancelEdit()
+    {
+        IsEditing = false;
+        ShowCreateMemberForm = false;
+        SelectedMember = null;
+
+        // Clear form fields
+        StudentId = "";
+        Fullname = "";
+        Username = "";
+        Password = "";
+    }
+    private async Task SaveEditAsync()
+    {
+        if (string.IsNullOrWhiteSpace(Fullname) ||
+            string.IsNullOrWhiteSpace(Username))
+        {
+            MessageBox.Show("Name and username are required.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
+        }
+
+        try
+        {
+            // Update member properties
+            SelectedMember.FullName = Fullname;
+            SelectedMember.Username = Username;
+
+            // Only update password if provided
+            if (!string.IsNullOrWhiteSpace(Password))
+            {
+                SelectedMember.Password = Password;
+            }
+
+            SelectedMember.RoleId = SelectedUserType;
+
+            // Save changes
+            await _dbContext.SaveChangesAsync();
+
+            MessageBox.Show("Member updated successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            // Reset form
+            CancelEdit();
+
+            // Refresh the list
+            await LoadMembersAsync();
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Error updating member: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+    }
+
+    // Disable member (soft delete)
+    private async Task DisableMemberAsync(User member)
+    {
+        if (member == null) return;
+
+        if (member.RoleId <= _currentUser.RoleId)
+        {
+            MessageBox.Show("You don't have permission to disable this user.",
+                "Permission Denied", MessageBoxButton.OK, MessageBoxImage.Warning);
+            return;
+        }
+        // Confirm deletion
+        var result = MessageBox.Show($"Are you sure you want to disable {member.FullName}?",
+            "Confirm Disable", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+        if (result != MessageBoxResult.Yes) return;
+
+        try
+        {
+            // Soft delete - set status to false
+            member.Status = false;
+            await _dbContext.SaveChangesAsync();
+
+            MessageBox.Show("Member disabled successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            // Refresh the list
+            await LoadMembersAsync();
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Error disabling member: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+    }
+    // Add this method to check permissions
+    private bool CanModifyUser(User user)
+    {
+        // Users can only modify users with a higher RoleId (lower rank)
+        // e.g., Admin (RoleId=1) can modify Club Leader (RoleId=2)
+        return user.RoleId > _currentUser.RoleId;
+    }
+
+    // Add this property to be used in the XAML
+    public User CurrentUser => _currentUser;
 }

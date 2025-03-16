@@ -11,6 +11,10 @@
         <converters:UserTypeToRoleConverter x:Key="UserTypeToRoleConverter"/>
         <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
         <converters:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter"/>
+        <converters:BoolToStringConverter x:Key="BoolToStringConverter"/>
+        <converters:InverseBoolConverter x:Key="InverseBoolConverter"/>
+        <converters:BoolToCommandConverter x:Key="BoolToCommandConverter"/>
+        <converters:RolePermissionToVisibilityConverter x:Key="RolePermissionToVisibilityConverter"/>
     </UserControl.Resources>
 
     <Grid>
@@ -38,18 +42,52 @@
                 <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="*"/>
                 <DataGridTextColumn Header="Date Joined" Binding="{Binding CreatedAt, StringFormat=\{0:MM/dd/yyyy\}}" Width="*"/>
                 <DataGridTextColumn Header="Role" Binding="{Binding RoleId, Converter={StaticResource UserTypeToRoleConverter}}" Width="*"/>
+                <DataGridTemplateColumn Header="Actions" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel.Visibility>
+                                    <MultiBinding Converter="{StaticResource RolePermissionToVisibilityConverter}">
+                                        <Binding Path="RoleId"/>
+                                        <Binding Path="DataContext.CurrentUser.RoleId" 
+                                 RelativeSource="{RelativeSource AncestorType=DataGrid}"/>
+                                    </MultiBinding>
+                                </StackPanel.Visibility>
+                                <Button Content="Edit" 
+                                Command="{Binding DataContext.EditMemberCommand, 
+                                          RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                CommandParameter="{Binding}"
+                                Style="{StaticResource NavButtonStyle}"
+                                Background="DarkGreen"
+                                Margin="14,0,5,0" Width="50"/>
+
+                                <Button Content="Delete" 
+                                Command="{Binding DataContext.DeleteMemberCommand, 
+                                          RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                CommandParameter="{Binding}"
+                                Style="{StaticResource NavButtonStyle}"
+                                Background="IndianRed"
+                                Margin="0,0,14,0" Width="50"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 
-        <!-- Create Member Form -->
+        <!-- Create/Edit Member Form -->
         <Grid Grid.Row="1" Margin="10" 
       Visibility="{Binding ShowCreateMemberForm, Converter={StaticResource BoolToVisibilityConverter}}">
             <StackPanel Width="400">
-                <TextBlock Text="Create New Member" FontSize="20" FontWeight="Bold" Margin="0,0,0,20"/>
-                <TextBlock Text="You can add members with roles lower than yours" 
-                   FontStyle="Italic" Margin="0,0,0,20"/>
+                <!-- Conditional header based on whether we're editing or creating -->
+                <TextBlock Text="{Binding IsEditing, Converter={StaticResource BoolToStringConverter}, 
+                 ConverterParameter='Edit Member|Create New Member'}" 
+                 FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                <!-- Form fields -->
                 <TextBlock Text="Student ID:"/>
-                <TextBox Text="{Binding StudentId}" Margin="0,5,0,10"/>
+                <TextBox Text="{Binding StudentId}" Margin="0,5,0,10" 
+                 IsEnabled="{Binding IsEditing, Converter={StaticResource InverseBoolConverter}}"/>
 
                 <TextBlock Text="Full Name:"/>
                 <TextBox Text="{Binding Fullname}" Margin="0,5,0,10"/>
@@ -58,7 +96,12 @@
                 <TextBox Text="{Binding Username}" Margin="0,5,0,10"/>
 
                 <TextBlock Text="Password:"/>
-                <PasswordBox x:Name="PasswordBox" Margin="0,5,0,10"/>
+                <StackPanel Orientation="Vertical">
+                    <PasswordBox x:Name="PasswordBox" Margin="0,5,0,0"/>
+                    <TextBlock Text="Leave blank to keep current password" 
+                       Visibility="{Binding IsEditing, Converter={StaticResource BoolToVisibilityConverter}}"
+                       FontStyle="Italic" FontSize="12" Margin="0,2,0,10"/>
+                </StackPanel>
 
                 <TextBlock Text="User Type:"/>
                 <ComboBox ItemsSource="{Binding AvailableUserTypes}" 
@@ -71,11 +114,27 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
 
+                <!-- Form buttons -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Content="Cancel" Command="{Binding CancelCreateCommand}"
-                    Style="{StaticResource NavButtonStyle}" Width="100" Height="30" Margin="0,0,10,0"/>
-                    <Button Content="Create" Command="{Binding CreateMemberCommand}"
-                    Style="{StaticResource NavButtonStyle}" Width="100" Height="30"/>
+                    <Button Content="Cancel" 
+                    Command="{Binding CancelCreateCommand}"
+                    Style="{StaticResource NavButtonStyle}" Width="100" Height="30" Margin="0,0,10,0"
+                    Visibility="{Binding IsEditing, Converter={StaticResource InverseBoolToVisibilityConverter}}" Background="red"/>
+
+                    <Button Content="Cancel" 
+                    Command="{Binding CancelEditCommand}"
+                    Style="{StaticResource NavButtonStyle}" Width="100" Height="30" Margin="0,0,10,0"
+                    Visibility="{Binding IsEditing, Converter={StaticResource BoolToVisibilityConverter}}" Background="red"/>
+
+                    <Button Content="Create" 
+                    Command="{Binding CreateMemberCommand}"
+                    Style="{StaticResource NavButtonStyle}" Width="100" Height="30"
+                    Visibility="{Binding IsEditing, Converter={StaticResource InverseBoolToVisibilityConverter}}" Background="DarkGreen"/>
+
+                    <Button Content="Save" 
+                    Command="{Binding SaveEditCommand}"
+                    Style="{StaticResource NavButtonStyle}" Width="100" Height="30"
+                    Visibility="{Binding IsEditing, Converter={StaticResource BoolToVisibilityConverter}}" Background="DarkGreen"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
