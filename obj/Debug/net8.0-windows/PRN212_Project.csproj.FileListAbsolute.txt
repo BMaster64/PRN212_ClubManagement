@@ -15,6 +15,7 @@ D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\GeneratedInter
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project_MarkupCompile.cache
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project_MarkupCompile.lref
 D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\PRN212_Project.exe
+D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\appsettings.json
 D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\PRN212_Project.deps.json
 D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\PRN212_Project.runtimeconfig.json
 D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\PRN212_Project.dll

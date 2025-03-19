@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.EntityFrameworkCore;
+using PRN212_Project.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,7 +13,7 @@ using System.Windows;
 public partial class MemberViewModel : ObservableObject
 {
     private readonly AuthService _authService;
-    private readonly DBContext _dbContext;
+    private readonly PrnprojectContext _dbContext;
     private readonly User _currentUser;
 
     [ObservableProperty]
@@ -53,7 +54,7 @@ public partial class MemberViewModel : ObservableObject
     {
         _currentUser = currentUser;
         _authService = new AuthService();
-        _dbContext = new DBContext();
+        _dbContext = new PrnprojectContext();
         Members = new ObservableCollection<User>();
         AvailableUserTypes = new ObservableCollection<int>();
         CanAddMembers = _currentUser.RoleId <= 3;
@@ -120,7 +121,7 @@ public partial class MemberViewModel : ObservableObject
             return;
         }
 
-        var newUser = new User
+        var newUser = new PRN212_Project.Models.User
         {
             StudentId = StudentId,
             FullName = Fullname,

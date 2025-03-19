@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using PRN212_Project.Models;
+using System.Windows;
 using System.Windows.Input;
 
 namespace PRN212_Project.Views
@@ -6,13 +7,13 @@ namespace PRN212_Project.Views
     public partial class RegisterView : Window
     {
         private readonly AuthService _authService;
-        private readonly DBContext _dbContext;
+        private readonly PrnprojectContext _dbContext;
 
         public RegisterView()
         {
             InitializeComponent();
             _authService = new AuthService();
-            _dbContext = new DBContext();
+            _dbContext = new PrnprojectContext();
         }
 
         private void DragWindow(object sender, MouseButtonEventArgs e)

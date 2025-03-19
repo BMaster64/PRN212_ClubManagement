@@ -1,17 +1,37 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-public class User
+namespace PRN212_Project.Models;
+
+public partial class User
 {
-    [Key]
-    public string StudentId { get; set; }
-    public string FullName { get; set; }
-    public string Username { get; set; }
-    public string Password { get; set; }
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public string StudentId { get; set; } = null!;
+
+    public string FullName { get; set; } = null!;
+
+    public string Username { get; set; } = null!;
+
+    public string Password { get; set; } = null!;
+
+    public DateTime? CreatedAt { get; set; }
+
     public int RoleId { get; set; }
-    [ForeignKey("Club")]
+
     public int ClubId { get; set; }
-    public Club Club { get; set; }
-    public bool Status { get; set; } = true;
+
+    public bool Status { get; set; }
+
+    public virtual Club Club { get; set; } = null!;
+
+    public virtual ICollection<EventRegistration> EventRegistrations { get; set; } = new List<EventRegistration>();
+
+    public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
+
+    public virtual ICollection<ParticipationClassification> ParticipationClassifications { get; set; } = new List<ParticipationClassification>();
+
+    public virtual ICollection<Report> ReportReceivers { get; set; } = new List<Report>();
+
+    public virtual ICollection<Report> ReportSenders { get; set; } = new List<Report>();
+
+    public virtual ICollection<UserNotification> UserNotifications { get; set; } = new List<UserNotification>();
 }

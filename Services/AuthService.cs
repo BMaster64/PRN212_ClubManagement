@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PRN212_Project.Models;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -8,7 +9,7 @@ public class AuthService
 {
     public User? Login(string username, string password)
     {
-        using var db = new DBContext();
+        using var db = new PrnprojectContext();
 
         try
         {
@@ -52,19 +53,19 @@ public class AuthService
 
     public async Task<bool> UsernameExistsAsync(string username)
     {
-        using var db = new DBContext();
+        using var db = new PrnprojectContext();
         return await db.Users.AnyAsync(u => u.Username == username);
     }
 
     public async Task<bool> StudentIdExistsAsync(string studentId)
     {
-        using var db = new DBContext();
+        using var db = new PrnprojectContext();
         return await db.Users.AnyAsync(u => u.StudentId == studentId);
     }
 
     public async Task<bool> RegisterWithClubAsync(User user, Club club)
     {
-        using var db = new DBContext();
+        using var db = new PrnprojectContext();
         using var transaction = await db.Database.BeginTransactionAsync();
 
         try
@@ -94,7 +95,7 @@ public class AuthService
 
     public async Task<bool> RegisterAsync(User user)
     {
-        using var db = new DBContext();
+        using var db = new PrnprojectContext();
         try
         {
             user.Password = HashPassword(user.Password); // Hash the password before saving

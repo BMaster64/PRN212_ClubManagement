@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-public class Club
+namespace PRN212_Project.Models;
+
+public partial class Club
 {
-    [Key]
     public int ClubId { get; set; }
-    [Required]
-    public string ClubName { get; set; }
-    public string Description { get; set; }
 
+    public string ClubName { get; set; } = null!;
+
+    public string? Description { get; set; }
+
+    public virtual ICollection<Event> Events { get; set; } = new List<Event>();
+
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
     public static Club CreateNewClub(string clubName, string description)
     {
         return new Club
