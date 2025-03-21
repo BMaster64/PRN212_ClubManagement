@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using PRN212_Project;
 using PRN212_Project.Models;
+using PRN212_Project.ViewModels;
 using PRN212_Project.Views;
 using System;
 using System.ComponentModel;
@@ -29,6 +31,14 @@ public class HomeViewModel : INotifyPropertyChanged
     public HomeViewModel(User currentUser)
     {
         _currentUser = currentUser;
+
+        // Store the current user in the application state
+        (Application.Current as App)?.SetCurrentUser(currentUser);
+        // Add a debug verification here
+        if ((Application.Current as App)?.GetCurrentUser() == null)
+        {
+            MessageBox.Show("Current user not set properly");
+        }
         // Default view
         CurrentView = new NotificationView();
 
@@ -44,11 +54,11 @@ public class HomeViewModel : INotifyPropertyChanged
     {
         switch (parameter)
         {
-            case "Notification":
-                CurrentView = new NotificationView();
-                break;
             case "Member":
                 CurrentView = new MemberView { DataContext = new MemberViewModel(_currentUser) };
+                break;
+            case "Notification":
+                CurrentView = new NotificationView { DataContext = new NotificationViewModel(_currentUser) };
                 break;
             case "Event":
                 CurrentView = new EventView();

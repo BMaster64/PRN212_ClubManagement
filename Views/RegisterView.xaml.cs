@@ -108,5 +108,9 @@ namespace PRN212_Project.Views
             loginView.Show();
             this.Close();
         }
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }

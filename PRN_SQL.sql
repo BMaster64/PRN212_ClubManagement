@@ -97,7 +97,25 @@ CREATE TABLE Report (
     CONSTRAINT FK_Report_Sender FOREIGN KEY (SenderId) REFERENCES [User](StudentId),
     CONSTRAINT FK_Report_Receiver FOREIGN KEY (ReceiverId) REFERENCES [User](StudentId)
 );
+ALTER TABLE Report
+DROP CONSTRAINT FK_Report_Receiver;
+ALTER TABLE Report
+DROP COLUMN ReceiverId;
+ALTER TABLE Report
+ADD ClubId INT;
+ALTER TABLE Report
+ADD CONSTRAINT FK_Report_Club FOREIGN KEY (ClubId) REFERENCES Club(ClubId);
+-- Create User Report Table
+CREATE TABLE UserReport (
+    UserReportId INT IDENTITY(1,1) PRIMARY KEY,
+    ReportId INT NOT NULL,
+    StudentId NVARCHAR(50) NOT NULL,
+    IsRead BIT DEFAULT 0,
+    ClubId INT NOT NULL,
 
+    CONSTRAINT FK_UserReport_Report FOREIGN KEY (ReportId) REFERENCES Report(ReportId),
+    CONSTRAINT FK_UserReport_User FOREIGN KEY (StudentId) REFERENCES [User](StudentId)
+);
 -- =============================
 -- INSERT SAMPLE DATA
 -- =============================

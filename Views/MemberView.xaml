@@ -24,7 +24,7 @@
         </Grid.RowDefinitions>
 
         <!-- Header -->
-        <StackPanel Orientation="Horizontal" Margin="10">
+        <StackPanel Orientation="Horizontal" Margin="10,50,0,0">
             <TextBlock Text="Member Management" FontSize="24" FontWeight="Bold" Margin="0,0,20,0"/>
             <Button Content="Add Member" 
             Command="{Binding ShowCreateFormCommand}"

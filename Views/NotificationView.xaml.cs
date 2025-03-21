@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using PRN212_Project.Models;
+using PRN212_Project.ViewModels;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PRN212_Project.Views
 {
@@ -23,6 +12,16 @@ namespace PRN212_Project.Views
         public NotificationView()
         {
             InitializeComponent();
+
+            // Check if we're in design mode
+            if (System.ComponentModel.DesignerProperties.GetIsInDesignMode(this))
+                return;
+
+            // Get the current user from the application state
+            var currentUser = App.Current.Properties["CurrentUser"] as User;
+
+            // Set the DataContext
+            DataContext = new NotificationViewModel(currentUser);
         }
     }
 }

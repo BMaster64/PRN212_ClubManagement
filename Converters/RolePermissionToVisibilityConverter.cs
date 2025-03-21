@@ -13,7 +13,7 @@ namespace PRN212_Project.Converters
             {
                 // Current user can only modify users with higher RoleId (lower rank)
                 // e.g., Admin (RoleId=1) can modify Club Leader (RoleId=2)
-                if (userRoleId > currentUserRoleId)
+                if (userRoleId >= currentUserRoleId && currentUserRoleId != 4)
                 {
                     return Visibility.Visible;
                 }

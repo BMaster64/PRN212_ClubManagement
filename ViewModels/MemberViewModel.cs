@@ -89,7 +89,8 @@ public partial class MemberViewModel : ObservableObject
     private async Task LoadMembersAsync()
     {
         var query = _dbContext.Users
-            .Where(u => u.ClubId == _currentUser.ClubId && u.Status == true);
+            .Where(u => u.ClubId == _currentUser.ClubId && u.Status == true)
+            .OrderBy(u => u.RoleId);
 
         var membersList = await query.ToListAsync();
 
@@ -104,7 +105,7 @@ public partial class MemberViewModel : ObservableObject
     {
         AvailableUserTypes.Clear();
         // Add available user types based on current user's type
-        for (int i = _currentUser.RoleId + 1; i <= 4; i++)
+        for (int i = _currentUser.RoleId; i <= 4; i++)
         {
             AvailableUserTypes.Add(i);
         }
@@ -120,8 +121,23 @@ public partial class MemberViewModel : ObservableObject
             MessageBox.Show("All fields are required.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             return;
         }
-
-        var newUser = new PRN212_Project.Models.User
+        // Check if student ID already exists and is active
+        bool studentIdExists = await _authService.StudentIdExistsAsync(StudentId);
+        if (studentIdExists)
+        {
+            MessageBox.Show("An user with this Student ID already exists. Cannot create account.",
+                            "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
+        }
+        // Check if username already exists
+        bool usernameExists = await _authService.UsernameExistsAsync(Username);
+        if (usernameExists)
+        {
+            MessageBox.Show("Username already exists. Please choose a different username.",
+                            "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
+        }
+        var newUser = new User
         {
             StudentId = StudentId,
             FullName = Fullname,
@@ -158,7 +174,7 @@ public partial class MemberViewModel : ObservableObject
     {
         if (member == null) return;
 
-        if (member.RoleId <= _currentUser.RoleId)
+        if (member.RoleId < _currentUser.RoleId || _currentUser.RoleId == 4)
         {
             MessageBox.Show("You don't have permission to edit this user.",
                 "Permission Denied", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -235,7 +251,7 @@ public partial class MemberViewModel : ObservableObject
     {
         if (member == null) return;
 
-        if (member.RoleId <= _currentUser.RoleId)
+        if (member.RoleId < _currentUser.RoleId || _currentUser.RoleId == 4)
         {
             MessageBox.Show("You don't have permission to disable this user.",
                 "Permission Denied", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -263,14 +279,6 @@ public partial class MemberViewModel : ObservableObject
             MessageBox.Show($"Error disabling member: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
-    // Add this method to check permissions
-    private bool CanModifyUser(User user)
-    {
-        // Users can only modify users with a higher RoleId (lower rank)
-        // e.g., Admin (RoleId=1) can modify Club Leader (RoleId=2)
-        return user.RoleId > _currentUser.RoleId;
-    }
 
-    // Add this property to be used in the XAML
     public User CurrentUser => _currentUser;
 }
