@@ -17,9 +17,11 @@ public partial class Report
 
     public string SenderId { get; set; } = null!;
 
-    public string ReceiverId { get; set; } = null!;
+    public int? ClubId { get; set; }
 
-    public virtual User Receiver { get; set; } = null!;
+    public virtual Club? Club { get; set; }
 
     public virtual User Sender { get; set; } = null!;
+
+    public virtual ICollection<UserReport> UserReports { get; set; } = new List<UserReport>();
 }

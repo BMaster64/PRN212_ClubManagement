@@ -13,6 +13,8 @@ public partial class Club
 
     public virtual ICollection<Event> Events { get; set; } = new List<Event>();
 
+    public virtual ICollection<Report> Reports { get; set; } = new List<Report>();
+
     public virtual ICollection<User> Users { get; set; } = new List<User>();
     public static Club CreateNewClub(string clubName, string description)
     {

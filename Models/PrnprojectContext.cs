@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace PRN212_Project.Models;
 
@@ -33,14 +31,12 @@ public partial class PrnprojectContext : DbContext
 
     public virtual DbSet<UserNotification> UserNotifications { get; set; }
 
+    public virtual DbSet<UserReport> UserReports { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        var builder = new ConfigurationBuilder();
-        builder.SetBasePath(Directory.GetCurrentDirectory());
-        builder.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-        var configuration = builder.Build();
-        optionsBuilder.UseSqlServer(configuration.GetConnectionString("Default"));
-    }
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Server=DESKTOP-7VSQ595\\SQLEXPRESS;uid=lann;password=982Lan;database=PRNProject;Encrypt=True;TrustServerCertificate=True;");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Club>(entity =>
@@ -132,19 +128,17 @@ public partial class PrnprojectContext : DbContext
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
-            entity.Property(e => e.ReceiverId).HasMaxLength(50);
             entity.Property(e => e.SenderId).HasMaxLength(50);
             entity.Property(e => e.Status)
                 .HasMaxLength(50)
                 .HasDefaultValue("Pending");
             entity.Property(e => e.Title).HasMaxLength(255);
 
-            entity.HasOne(d => d.Receiver).WithMany(p => p.ReportReceivers)
-                .HasForeignKey(d => d.ReceiverId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Report_Receiver");
+            entity.HasOne(d => d.Club).WithMany(p => p.Reports)
+                .HasForeignKey(d => d.ClubId)
+                .HasConstraintName("FK_Report_Club");
 
-            entity.HasOne(d => d.Sender).WithMany(p => p.ReportSenders)
+            entity.HasOne(d => d.Sender).WithMany(p => p.Reports)
                 .HasForeignKey(d => d.SenderId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Report_Sender");
@@ -191,6 +185,26 @@ public partial class PrnprojectContext : DbContext
                 .HasForeignKey(d => d.StudentId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_UserNotification_User");
+        });
+
+        modelBuilder.Entity<UserReport>(entity =>
+        {
+            entity.HasKey(e => e.UserReportId).HasName("PK__UserRepo__915FD7F5B90CE2EB");
+
+            entity.ToTable("UserReport");
+
+            entity.Property(e => e.IsRead).HasDefaultValue(false);
+            entity.Property(e => e.StudentId).HasMaxLength(50);
+
+            entity.HasOne(d => d.Report).WithMany(p => p.UserReports)
+                .HasForeignKey(d => d.ReportId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_UserReport_Report");
+
+            entity.HasOne(d => d.Student).WithMany(p => p.UserReports)
+                .HasForeignKey(d => d.StudentId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_UserReport_User");
         });
 
         OnModelCreatingPartial(modelBuilder);

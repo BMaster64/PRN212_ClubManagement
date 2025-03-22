@@ -4,9 +4,197 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PRN212_Project.Views"
+             xmlns:viewmodels="clr-namespace:PRN212_Project.ViewModels"
+             xmlns:converters="clr-namespace:PRN212_Project.Converters"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="600" d:DesignWidth="700">
+
+    <UserControl.Resources>
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <converters:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter"/>
+        <converters:StatusToColorConverter x:Key="StatusToColorConverter"/>
+        <Style x:Key="ReportItemStyle" TargetType="Border">
+            <Setter Property="Margin" Value="0,5,0,5" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="0,0,0,1" />
+            <Setter Property="BorderBrush" Value="#E0E0E0" />
+            <Setter Property="Background" Value="White" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsRead}" Value="False">
+                    <Setter Property="Background" Value="#EDF6FF" />
+                </DataTrigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#F5F5F5" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
     <Grid>
-        <TextBlock Text="Report Page" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Grid Grid.Row="0" Margin="0,50,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Reports" FontSize="24" FontWeight="Bold" Foreground="Black" Margin="20,15" />
+            <Button Grid.Column="1" Content="Create" Command="{Binding ShowCreateFormCommand}" Margin="10" Padding="8,4" 
+                    Visibility="{Binding CanCreateReport, Converter={StaticResource BoolToVisibilityConverter}}" />
+            <Button Grid.Column="2" Content="Refresh" Command="{Binding RefreshCommand}" Margin="10" Padding="8,4" />
+        </Grid>
+
+        <!-- Content -->
+        <Grid Grid.Row="1">
+            <!-- Reports List -->
+            <Border BorderThickness="0,0,1,0" BorderBrush="#E0E0E0" Background="#F8F9FA"
+                    Visibility="{Binding ShowCreateForm, Converter={StaticResource InverseBoolToVisibilityConverter}}">
+                <Grid>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ItemsControl ItemsSource="{Binding Reports}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Style="{StaticResource ReportItemStyle}">
+                                        <Grid Cursor="Hand">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.InputBindings>
+                                                <MouseBinding MouseAction="LeftClick" 
+                                                              Command="{Binding DataContext.MarkAsReadCommand, 
+                                                              RelativeSource={RelativeSource AncestorType=ItemsControl}}" 
+                                                              CommandParameter="{Binding}" />
+                                            </Grid.InputBindings>
+                                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                                <TextBlock Text="{Binding Title}" FontWeight="SemiBold" />
+                                                <Ellipse Width="10" Height="10" Fill="#4285F4" Margin="10,0,0,0" 
+                                                         Visibility="{Binding IsRead, Converter={StaticResource InverseBoolToVisibilityConverter}}" />
+                                            </StackPanel>
+                                            <TextBlock Grid.Row="1" Text="{Binding SenderName}" FontSize="12" Margin="0,5,0,0" />
+                                            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,5,0,0">
+                                                <TextBlock Text="Status: " FontSize="11" Foreground="#666" />
+                                                <TextBlock Text="{Binding Status}" FontSize="11" FontWeight="SemiBold" 
+                                                           Foreground="{Binding Status, Converter={StaticResource StatusToColorConverter}}" />
+                                            </StackPanel>
+                                            <TextBlock Grid.Row="3" Text="{Binding CreatedAt, StringFormat='{}{0:dd MMM yyyy, HH:mm}'}" 
+                                                       FontSize="11" Foreground="#666" Margin="0,5,0,0" />
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+
+                    <!-- Empty state -->
+                    <TextBlock Text="No reports" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center" 
+                               Foreground="#888" 
+                               FontSize="16"
+                               Visibility="{Binding HasReports, Converter={StaticResource InverseBoolToVisibilityConverter}}" />
+
+                    <!-- Loading indicator -->
+                    <Border Background="#80FFFFFF" 
+                            Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisibilityConverter}}">
+                        <TextBlock Text="Loading..." 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center" 
+                                   FontSize="16" />
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!-- Create Report Form -->
+            <Border BorderThickness="0" BorderBrush="#E0E0E0" Background="White"
+                    Visibility="{Binding ShowCreateForm, Converter={StaticResource BoolToVisibilityConverter}}">
+                <Grid Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="Create New Report" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" />
+
+                    <TextBlock Grid.Row="1" Text="Title:" FontWeight="SemiBold" Margin="0,0,0,5" />
+                    <TextBox Grid.Row="2" Text="{Binding ReportTitle, UpdateSourceTrigger=PropertyChanged}" Padding="5" Margin="0,0,0,15" />
+
+                    <TextBlock Grid.Row="3" Text="Content:" FontWeight="SemiBold" Margin="0,0,0,5" />
+                    <TextBox Grid.Row="4" Text="{Binding ReportContent, UpdateSourceTrigger=PropertyChanged}" 
+                             TextWrapping="Wrap" AcceptsReturn="True" Height="200" Padding="5" Margin="0,0,0,20" />
+
+                    <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Content="Cancel" Command="{Binding CancelCreateCommand}" Padding="15,8" Margin="0,0,10,0" Background="LightGray" />
+                        <Button Content="Submit" Command="{Binding CreateReportCommand}" Padding="15,8" Background="#4285F4" Foreground="White" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Report Detail -->
+            <Border Background="White" 
+                    BorderThickness="1" 
+                    BorderBrush="#E0E0E0" 
+                    Visibility="{Binding IsDetailVisible, Converter={StaticResource BoolToVisibilityConverter}}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0" Background="#F8F9FA" BorderThickness="0,0,0,1" BorderBrush="#E0E0E0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding SelectedReport.Title}" FontSize="18" FontWeight="SemiBold" Margin="15,10" />
+                            <Button Grid.Column="1" Content="Close" Command="{Binding CloseDetailCommand}" Margin="10" Padding="8,4" />
+                        </Grid>
+                    </Border>
+
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{Binding SelectedReport.SenderName}" FontWeight="SemiBold" />
+                            <Grid Margin="0,5,0,15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="{Binding SelectedReport.CreatedAt, StringFormat='{}{0:dd MMM yyyy, HH:mm}'}" 
+                                       FontSize="12" Foreground="#666" />
+                                <TextBlock Grid.Column="1" Text=" | Status: " FontSize="12" Foreground="#666" Margin="5,0,0,0" />
+                                <!-- Status display (visible when user can't change status) -->
+                                <TextBlock Grid.Column="2" Text="{Binding SelectedReport.Status}" 
+                                    FontSize="12" FontWeight="SemiBold" 
+                                    Foreground="{Binding SelectedReport.Status, Converter={StaticResource StatusToColorConverter}}"
+                                    Visibility="{Binding CanChangeReportStatus, Converter={StaticResource InverseBoolToVisibilityConverter}}" />
+
+                                <!-- Status dropdown (visible when user can change status) -->
+                                <StackPanel Grid.Column="2" Orientation="Horizontal" 
+                                    Visibility="{Binding CanChangeReportStatus, Converter={StaticResource BoolToVisibilityConverter}}">
+                                    <ComboBox Width="120" SelectedItem="{Binding SelectedReport.Status}" ItemsSource="{Binding ReportStatusOptions}"/>
+                                    <Button Content="Update" Command="{Binding UpdateReportStatusCommand}" 
+                                     Margin="10,0,0,0" Padding="8,2" Background="#4285F4" Foreground="White"/>
+                                </StackPanel>
+                            </Grid>
+                            <TextBlock Text="{Binding ReportContent}" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
 </UserControl>

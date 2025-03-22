@@ -29,9 +29,9 @@ public partial class User
 
     public virtual ICollection<ParticipationClassification> ParticipationClassifications { get; set; } = new List<ParticipationClassification>();
 
-    public virtual ICollection<Report> ReportReceivers { get; set; } = new List<Report>();
-
-    public virtual ICollection<Report> ReportSenders { get; set; } = new List<Report>();
+    public virtual ICollection<Report> Reports { get; set; } = new List<Report>();
 
     public virtual ICollection<UserNotification> UserNotifications { get; set; } = new List<UserNotification>();
+
+    public virtual ICollection<UserReport> UserReports { get; set; } = new List<UserReport>();
 }

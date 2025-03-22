@@ -13,7 +13,12 @@ public class HomeViewModel : INotifyPropertyChanged
     private readonly User _currentUser;
     private object _currentView;
     private Visibility _reportTabVisibility;
-
+    private string _clubName;
+    public string ClubName
+    {
+        get { return _clubName; }
+        set { _clubName = value; OnPropertyChanged(nameof(ClubName)); }
+    }
     public object CurrentView
     {
         get { return _currentView; }
@@ -31,7 +36,7 @@ public class HomeViewModel : INotifyPropertyChanged
     public HomeViewModel(User currentUser)
     {
         _currentUser = currentUser;
-
+        ClubName = currentUser.Club.ClubName;
         // Store the current user in the application state
         (Application.Current as App)?.SetCurrentUser(currentUser);
         // Add a debug verification here
@@ -67,7 +72,7 @@ public class HomeViewModel : INotifyPropertyChanged
                 CurrentView = new ChatView();
                 break;
             case "Report":
-                CurrentView = new ReportView();
+                CurrentView = new ReportView() { DataContext = new ReportViewModel(_currentUser) };
                 break;
         }
     }
