@@ -11,6 +11,8 @@ public partial class Club
 
     public string? Description { get; set; }
 
+    public virtual ICollection<ChatChannel> ChatChannels { get; set; } = new List<ChatChannel>();
+
     public virtual ICollection<Event> Events { get; set; } = new List<Event>();
 
     public virtual ICollection<Report> Reports { get; set; } = new List<Report>();

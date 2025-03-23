@@ -14,7 +14,7 @@ public class AuthService
         try
         {
             // First get the user without including Club to check credentials
-            var user = db.Users.FirstOrDefault(u => u.Username == username && u.Status);
+            var user = db.Users.Include(u => u.Club).FirstOrDefault(u => u.Username == username && u.Status);
 
             if (user == null || !VerifyPassword(password, user.Password))
                 return null;

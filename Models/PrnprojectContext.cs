@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace PRN212_Project.Models;
 
@@ -14,6 +16,10 @@ public partial class PrnprojectContext : DbContext
         : base(options)
     {
     }
+
+    public virtual DbSet<ChatChannel> ChatChannels { get; set; }
+
+    public virtual DbSet<ChatMessage> ChatMessages { get; set; }
 
     public virtual DbSet<Club> Clubs { get; set; }
 
@@ -34,11 +40,54 @@ public partial class PrnprojectContext : DbContext
     public virtual DbSet<UserReport> UserReports { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=DESKTOP-7VSQ595\\SQLEXPRESS;uid=lann;password=982Lan;database=PRNProject;Encrypt=True;TrustServerCertificate=True;");
-
+    {
+        var builder = new ConfigurationBuilder();
+        builder.SetBasePath(Directory.GetCurrentDirectory());
+        builder.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+        var configuration = builder.Build();
+        optionsBuilder.UseSqlServer(configuration.GetConnectionString("Default"));
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<ChatChannel>(entity =>
+        {
+            entity.HasKey(e => e.ChannelId).HasName("PK__ChatChan__38C3E814A634A7CE");
+
+            entity.ToTable("ChatChannel");
+
+            entity.Property(e => e.ChannelName).HasMaxLength(100);
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+
+            entity.HasOne(d => d.Club).WithMany(p => p.ChatChannels)
+                .HasForeignKey(d => d.ClubId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_ChatChannel_Club");
+        });
+
+        modelBuilder.Entity<ChatMessage>(entity =>
+        {
+            entity.HasKey(e => e.MessageId).HasName("PK__ChatMess__C87C0C9C76703D09");
+
+            entity.ToTable("ChatMessage");
+
+            entity.Property(e => e.SenderId).HasMaxLength(50);
+            entity.Property(e => e.SentAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+
+            entity.HasOne(d => d.Channel).WithMany(p => p.ChatMessages)
+                .HasForeignKey(d => d.ChannelId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_ChatMessage_Channel");
+
+            entity.HasOne(d => d.Sender).WithMany(p => p.ChatMessages)
+                .HasForeignKey(d => d.SenderId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_ChatMessage_User");
+        });
+
         modelBuilder.Entity<Club>(entity =>
         {
             entity.HasKey(e => e.ClubId).HasName("PK__Club__D35058E748BEBC16");

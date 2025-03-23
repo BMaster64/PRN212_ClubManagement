@@ -17,8 +17,8 @@
                    FontWeight="Bold" 
                    Foreground="White" 
                    VerticalAlignment="Center"
-                   Margin="20,0,0,0"
-                   HorizontalAlignment="Left"/>
+                   Margin="205,0,0,0"
+                   HorizontalAlignment="Left" Width="620"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <Button Content="_" Width="30" Height="30" VerticalAlignment="Center" Margin="0,0,5,0" Click="MinimizeButton_Click" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="20"/>
                     <Button Content="X" Width="30" Height="30" VerticalAlignment="Center" Margin="0,0,10,0" Click="CloseButton_Click" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="20"/>

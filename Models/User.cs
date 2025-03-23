@@ -21,6 +21,8 @@ public partial class User
 
     public bool Status { get; set; }
 
+    public virtual ICollection<ChatMessage> ChatMessages { get; set; } = new List<ChatMessage>();
+
     public virtual Club Club { get; set; } = null!;
 
     public virtual ICollection<EventRegistration> EventRegistrations { get; set; } = new List<EventRegistration>();

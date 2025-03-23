@@ -4,9 +4,86 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PRN212_Project.Views"
+             xmlns:viewmodels="clr-namespace:PRN212_Project.ViewModels"
+             xmlns:converters="clr-namespace:PRN212_Project.Converters"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="550" d:DesignWidth="700">
+
+    <UserControl.DataContext>
+        <viewmodels:ChatViewModel />
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <converters:MessageAlignmentConverter x:Key="MessageAlignmentConverter"/>
+        <converters:MessageColorConverter x:Key="MessageColorConverter"/>
+        <Style x:Key="NavButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="20,10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" Padding="10,5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#3498db"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
     <Grid>
-        <TextBlock Text="Public Chat Page" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Background="#3498db" Padding="10" Margin="0,50,0,0">
+            <TextBlock Text="Club Chat" Foreground="White" FontSize="20" FontWeight="Bold"/>
+        </Border>
+
+        <!-- Messages List -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10" Name="ChatScrollViewer">
+            <ItemsControl ItemsSource="{Binding Messages}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="10,5" Padding="10" 
+                                Background="{Binding SenderId, Converter={StaticResource MessageColorConverter}}"
+                                CornerRadius="5" MaxWidth="400"
+                                HorizontalAlignment="{Binding SenderId, Converter={StaticResource MessageAlignmentConverter}}">
+                            <StackPanel>
+                                <TextBlock Text="{Binding Sender.FullName}" FontWeight="Bold" Margin="0,0,0,5"/>
+                                <TextBlock Text="{Binding Content}" TextWrapping="Wrap"/>
+                                <TextBlock Text="{Binding SentAt, StringFormat='HH:mm:ss, dd MMM yyyy'}" 
+                                           FontSize="10" HorizontalAlignment="Right" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <!-- Message Input -->
+        <Grid Grid.Row="2" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="0" Text="{Binding MessageText, UpdateSourceTrigger=PropertyChanged}" 
+                     Padding="10" FontSize="14" AcceptsReturn="False" 
+                     KeyDown="TextBox_KeyDown"/>
+
+            <Button Grid.Column="1" Content="Send" Margin="10,0,0,0" Padding="15,5" 
+                    Command="{Binding SendMessageCommand}" Background="#2ecc71" Foreground="White"/>
+        </Grid>
     </Grid>
 </UserControl>

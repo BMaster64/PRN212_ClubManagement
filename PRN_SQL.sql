@@ -116,6 +116,31 @@ CREATE TABLE UserReport (
     CONSTRAINT FK_UserReport_Report FOREIGN KEY (ReportId) REFERENCES Report(ReportId),
     CONSTRAINT FK_UserReport_User FOREIGN KEY (StudentId) REFERENCES [User](StudentId)
 );
+-- Create ChatChannel Table
+CREATE TABLE ChatChannel (
+    ChannelId INT IDENTITY(1,1) PRIMARY KEY,
+    ChannelName NVARCHAR(100) NOT NULL,
+    ClubId INT NOT NULL,
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    
+    CONSTRAINT FK_ChatChannel_Club FOREIGN KEY (ClubId) REFERENCES Club(ClubId)
+);
+
+-- Create ChatMessage Table
+CREATE TABLE ChatMessage (
+    MessageId INT IDENTITY(1,1) PRIMARY KEY,
+    Content NVARCHAR(MAX) NOT NULL,
+    SenderId NVARCHAR(50) NOT NULL,
+    ChannelId INT NOT NULL,
+    SentAt DATETIME DEFAULT GETDATE(),
+    
+    CONSTRAINT FK_ChatMessage_User FOREIGN KEY (SenderId) REFERENCES [User](StudentId),
+    CONSTRAINT FK_ChatMessage_Channel FOREIGN KEY (ChannelId) REFERENCES ChatChannel(ChannelId)
+);
+
+-- Insert a default channel for each club
+INSERT INTO ChatChannel (ChannelName, ClubId)
+SELECT CONCAT(ClubName, ' General'), ClubId FROM Club;
 -- =============================
 -- INSERT SAMPLE DATA
 -- =============================
