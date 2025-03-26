@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\
 PRN212_Project
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\App.xaml
-8-608194400
+D:\Document\Eppede\PRN212\PRN212_Project\App.xaml
+11-767918945
 
-371248369885
-235-419222972
-MainWindow.xaml;Theme\HomeTheme.xaml;Theme\TextBoxTheme.xaml;Views\EventView.xaml;Views\HomeView.xaml;Views\LoginView.xaml;Views\MemberView.xaml;Views\RegisterView.xaml;
+431891500623
+2351070964747
+MainWindow.xaml;Theme\HomeTheme.xaml;Theme\TextBoxTheme.xaml;Views\ChatView.xaml;Views\EventView.xaml;Views\HomeView.xaml;Views\LoginView.xaml;Views\MemberView.xaml;Views\NotificationView.xaml;Views\RegisterView.xaml;Views\ReportView.xaml;
 
 False
 

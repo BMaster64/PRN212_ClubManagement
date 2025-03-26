@@ -41,7 +41,11 @@ namespace PRN212_Project.ViewModels
 
         [ObservableProperty]
         private bool canCreateNotification;
+        [ObservableProperty]
+        private bool isEditMode;
 
+        [ObservableProperty]
+        private int editingNotificationId;
         // Commands
         public IAsyncRelayCommand LoadNotificationsCommand { get; }
         public IAsyncRelayCommand RefreshCommand { get; } // Added missing command
@@ -50,6 +54,9 @@ namespace PRN212_Project.ViewModels
         public IRelayCommand ShowCreateFormCommand { get; }
         public IAsyncRelayCommand CreateNotificationCommand { get; }
         public IRelayCommand CancelCreateCommand { get; }
+        public IAsyncRelayCommand DeleteNotificationCommand { get; }
+        public IRelayCommand StartEditCommand { get; }
+        public IAsyncRelayCommand UpdateNotificationCommand { get; }
 
         public NotificationViewModel(User currentUser)
         {
@@ -94,7 +101,9 @@ namespace PRN212_Project.ViewModels
                 NotificationContent = string.Empty;
             });
             CreateNotificationCommand = new AsyncRelayCommand(CreateNotificationAsync);
-
+            DeleteNotificationCommand = new AsyncRelayCommand<UserNotificationDto>(DeleteNotificationAsync);
+            StartEditCommand = new RelayCommand<UserNotificationDto>(StartEdit);
+            UpdateNotificationCommand = new AsyncRelayCommand(UpdateNotificationAsync);
             // Load notifications when the view model is initialized
             LoadNotificationsAsync();
         }
@@ -259,6 +268,153 @@ namespace PRN212_Project.ViewModels
             catch (Exception ex)
             {
                 MessageBox.Show($"Error creating notification: {ex.Message}",
+                    "Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
+        }
+        private void StartEdit(UserNotificationDto notification)
+        {
+            // Only allow edit for users with role 1, 2, or 3 and for notifications they created
+            if (CanCreateNotification && _context.Notifications
+                .Any(n => n.NotificationId == notification.NotificationId && n.SenderId == _currentUser.StudentId))
+            {
+                IsEditMode = true;
+                EditingNotificationId = notification.NotificationId;
+                NotificationTitle = notification.Title;
+                NotificationContent = notification.Content;
+            }
+            else
+            {
+                MessageBox.Show("You don't have permission to edit this notification.",
+                    "Permission Denied",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning);
+            }
+        }
+
+        private async Task UpdateNotificationAsync()
+        {
+            if (string.IsNullOrWhiteSpace(NotificationTitle) ||
+                string.IsNullOrWhiteSpace(NotificationContent))
+            {
+                MessageBox.Show("Title and content are required.",
+                    "Validation Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+                return;
+            }
+
+            try
+            {
+                var notification = await _context.Notifications
+                    .FirstOrDefaultAsync(n => n.NotificationId == EditingNotificationId);
+
+                if (notification == null)
+                {
+                    MessageBox.Show("Notification not found.",
+                        "Error",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Error);
+                    return;
+                }
+
+                // Ensure the current user is the sender
+                if (notification.SenderId != _currentUser.StudentId)
+                {
+                    MessageBox.Show("You can only edit notifications you created.",
+                        "Permission Denied",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Warning);
+                    return;
+                }
+
+                // Update notification details
+                notification.Title = NotificationTitle;
+                notification.Content = NotificationContent;
+
+                await _context.SaveChangesAsync();
+
+                MessageBox.Show("Notification updated successfully!",
+                    "Success",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+
+                // Reset edit mode and refresh notifications
+                IsEditMode = false;
+                NotificationTitle = string.Empty;
+                NotificationContent = string.Empty;
+                await LoadNotificationsAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating notification: {ex.Message}",
+                    "Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
+        }
+
+        private async Task DeleteNotificationAsync(UserNotificationDto notification)
+        {
+            if (notification == null) return;
+
+            try
+            {
+                // Check if the current user can delete the notification
+                var originalNotification = await _context.Notifications
+                    .FirstOrDefaultAsync(n => n.NotificationId == notification.NotificationId);
+
+                if (originalNotification == null)
+                {
+                    MessageBox.Show("Notification not found.",
+                        "Error",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Error);
+                    return;
+                }
+
+                // Only allow deletion for the sender or users with roles 1-3
+                if (originalNotification.SenderId != _currentUser.StudentId && _currentUser.RoleId > 3)
+                {
+                    MessageBox.Show("You don't have permission to delete this notification.",
+                        "Permission Denied",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Warning);
+                    return;
+                }
+
+                // Confirm deletion
+                var result = MessageBox.Show("Are you sure you want to delete this notification?",
+                    "Confirm Deletion",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.No) return;
+
+                // Remove associated UserNotifications first
+                var userNotifications = await _context.UserNotifications
+                    .Where(un => un.NotificationId == notification.NotificationId)
+                    .ToListAsync();
+
+                _context.UserNotifications.RemoveRange(userNotifications);
+
+                // Then remove the notification
+                _context.Notifications.Remove(originalNotification);
+
+                await _context.SaveChangesAsync();
+
+                MessageBox.Show("Notification deleted successfully!",
+                    "Success",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+
+                // Refresh notifications
+                await LoadNotificationsAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error deleting notification: {ex.Message}",
                     "Error",
                     MessageBoxButton.OK,
                     MessageBoxImage.Error);

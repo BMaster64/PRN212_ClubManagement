@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using PRN212_Project;
 using PRN212_Project.Models;
+using PRN212_Project.ViewModels;
 using PRN212_Project.Views;
 using System.ComponentModel;
 using System.Windows;
@@ -59,18 +60,21 @@ public class HomeViewModel : INotifyPropertyChanged
             case "Member":
                 CurrentView = new MemberView { DataContext = new MemberViewModel(_currentUser) };
                 break;
-            //case "Notification":
-            //    CurrentView = new NotificationView { DataContext = new NotificationViewModel(_currentUser) };
-            //    break;
-            case "Event":
-                CurrentView = new EventView();
+            case "Notification":
+                CurrentView = new NotificationView { DataContext = new NotificationViewModel(_currentUser) };
                 break;
-                //case "Chat":
-                //    CurrentView = new ChatView();
-                //    break;
-                //case "Report":
-                //    CurrentView = new ReportView() { DataContext = new ReportViewModel(_currentUser) };
-                //    break;
+            case "Event":
+                CurrentView = new EventView { DataContext = new NotificationViewModel(_currentUser) };
+                break;
+            case "Chat":
+                CurrentView = new ChatView();
+                break;
+            case "Report":
+                CurrentView = new ReportView() { DataContext = new ReportViewModel(_currentUser) };
+                break;
+            default:
+                CurrentView = new NotificationView { DataContext = new NotificationViewModel(_currentUser) };
+                break;
         }
     }
 

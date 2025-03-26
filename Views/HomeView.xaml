@@ -5,9 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRN212_Project.Views"
         mc:Ignorable="d"
-        Title="HomeView"
-        Height="auto"
-        Width="900"
+        Title="HomeView" Height="600" Width="900"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         ResizeMode="NoResize">
@@ -34,34 +32,20 @@
         </Border>
 
         <!-- Left Navigation Bar -->
-        <DockPanel Width="200" Background="#2C3E50" Margin="0,50,700,0" VerticalAlignment="Top">
-            <!-- Ở đây mình để Margin="0,50,700,0" 
-                 nghĩa là 50 px bên dưới header, 
-                 700 px cho chiều rộng “thay” cho 
-                 ContentControl. (Giữ như code bạn có) -->
-
-            <StackPanel Margin="10" Height="532">
+        <DockPanel Width="200" Background="#2C3E50" Margin="0,0,700,0">
+            <StackPanel Margin="10" Height="582">
                 <TextBlock Text="Navigation" FontSize="28" FontWeight="Bold" Foreground="White" Margin="10"/>
 
-                <!--<Button Content="Notification" Style="{StaticResource NavButtonStyle}"
-                        Command="{Binding NavigateCommand}" CommandParameter='Notification'/>-->
-                <Button Content="Member" Style="{StaticResource NavButtonStyle}"
-                        Command="{Binding NavigateCommand}" CommandParameter='Member'/>
-                <Button Content="Event" Style="{StaticResource NavButtonStyle}"
-                        Command="{Binding NavigateCommand}" CommandParameter='Event'/>
-                <!--<Button Content="Chat" Style="{StaticResource NavButtonStyle}"
-                        Command="{Binding NavigateCommand}" CommandParameter='Chat'/>
-                <Button Content="Report" Style="{StaticResource NavButtonStyle}"
-                        Command="{Binding NavigateCommand}" CommandParameter='Report'
-                        Visibility="{Binding ReportTabVisibility}"/>-->
-                <Button Content="Log Out" Style="{StaticResource NavButtonStyle}"
-                        Click="LogOutButton_Click" Margin="20, 330, 20, 0" Background="DarkRed"/>
+                <Button Content="Notification" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Notification'/>
+                <Button Content="Member" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Member'/>
+                <Button Content="Event" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Event'/>
+                <Button Content="Chat" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Chat'/>
+                <Button Content="Report" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Report' Visibility="{Binding ReportTabVisibility}"/>
+                <Button Content="Log Out" Style="{StaticResource NavButtonStyle}" Click="LogOutButton_Click" Margin="20, 330, 20, 0" Background="DarkRed"/>
             </StackPanel>
         </DockPanel>
 
-        <!-- Main Content Area (bọc ScrollViewer) -->
-        <ScrollViewer Margin="200,50,0,0" VerticalScrollBarVisibility="Auto">
-            <ContentControl Content="{Binding CurrentView}" />
-        </ScrollViewer>
+        <!-- Main Content Area -->
+        <ContentControl Content="{Binding CurrentView}" Margin="200,0,0,0"/>
     </Grid>
 </Window>

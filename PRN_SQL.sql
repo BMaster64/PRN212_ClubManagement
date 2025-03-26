@@ -159,9 +159,15 @@ VALUES
 ('S003', 'Emily Johnson', 'emilyj', 'password123', 3, 2);
 
 -- Insert Event Data
-INSERT INTO Event (EventName, StartTime, EndTime, Location, Description, Status, ClubId)
+INSERT INTO [Event] (EventName, StartTime, EndTime, Location, Description, Status, ClubId)
 VALUES 
-('Chess Tournament', '2025-05-10 09:00:00', '2025-05-10 17:00:00', 'Main Hall', 'Annual chess competition', 'Scheduled', 1);
+('Hackathon 2024', '2024-07-01 09:00:00', '2024-07-02 18:00:00', 'Tech Innovation Center', '24-hour coding competition with exciting prizes', 'Upcoming', 2),
+('Cybersecurity Seminar', '2024-05-05 14:00:00', '2024-05-05 16:30:00', 'Computer Science Building', 'Expert talk on latest cybersecurity trends', 'Upcoming', 2),
+('Programming Workshop', '2024-03-20 15:00:00', '2024-03-20 17:00:00', 'Computer Lab', 'Introductory Python programming session', 'Completed', 2),
+('Football Tournament', '2025-05-10 09:00:00', '2025-05-10 17:00:00', 'Main Hall', 'Annual football competition', 'Scheduled', 1),
+('Annual Sports Day', '2025-05-15 09:00:00', '2024-05-15 17:00:00', 'University Stadium', 'Exciting day of inter-club sports competitions', 'Scheduled', 1),
+('Football Tournament', '2025-06-22 13:00:00', '2024-06-23 18:00:00', 'Main Sports Ground', 'Weekend football championship for club members', 'Scheduled', 1),
+('Fitness Workshop', '2025-04-10 16:00:00', '2024-04-10 18:00:00', 'University Gym', 'Professional fitness training and nutrition seminar', 'Scheduled', 1);
 
 -- Insert Event Registration
 INSERT INTO EventRegistration (EventId, StudentId, Status)
@@ -172,18 +178,31 @@ VALUES
 -- Insert Notification
 INSERT INTO Notification (Title, Content, SenderId)
 VALUES 
-('Event Reminder', 'The chess tournament is this Saturday!', 'S001');
-
+('Event Reminder', 'The chess tournament is this Saturday!', 'HE323211'),
+('Sports Day Preparation', 'All members, please prepare for the upcoming Sports Day!', 'HE323211'),
+('Hackathon Registration Open', 'Register now for our annual Hackathon 2024!', 'HE181222');
 -- Insert User Notification
 INSERT INTO UserNotification (NotificationId, StudentId, IsRead, ClubId)
 VALUES 
-(1, 'S002', 0, 1);
+(1, 'HE123123', 0, 1),
+(1, 'HE132322', 0, 1),
+(1, 'HE323211', 0, 1),
+(1, 'HE545454', 0, 1),
+(2, 'HE123123', 0, 1),
+(2, 'HE132322', 0, 1),
+(2, 'HE323211', 0, 1),
+(2, 'HE545454', 0, 1);
 
 -- Insert Report
-INSERT INTO Report (Title, Content, SenderId, ReceiverId)
-VALUES 
-('Monthly Chess Report', 'Chess club participation increased by 10% this month.', 'S001', 'S002');
+INSERT INTO Report (Title, Content, Status, SenderId, ClubId) VALUES
+('Club Budget Proposal', 'Detailed budget plan for sports equipment and training', 'Pending', 'HE323211', 1),
+('IT Infrastructure Upgrade', 'Proposal for new computer lab equipment', 'Pending', 'HE323211', 1);
 
+INSERT INTO UserReport (ReportId, StudentId, IsRead, ClubId) VALUES
+(1, 'HE123123', 0, 1),
+(1, 'HE132322', 0, 1),
+(2, 'HE123123', 0, 1),
+(2, 'HE132322', 0, 1);
 -- =============================
 -- QUERIES
 -- =============================

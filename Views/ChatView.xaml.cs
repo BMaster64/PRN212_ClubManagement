@@ -20,7 +20,7 @@ namespace PRN212_Project.Views
                 // Scroll to bottom when messages are loaded
                 content.SizeChanged += (s, args) =>
                 {
-                    ChatScrollViewer.ScrollToEnd();
+                    ChatScrollViewer.ScrollToBottom();
                 };
             }
         }

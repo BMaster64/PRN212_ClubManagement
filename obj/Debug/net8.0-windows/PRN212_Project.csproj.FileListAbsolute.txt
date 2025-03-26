@@ -139,28 +139,22 @@ D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Theme\HomeTheme.baml
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Theme\TextBoxTheme.baml
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\MainWindow.g.cs
-D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ChatView.g.cs
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\EventView.g.cs
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\HomeView.g.cs
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\LoginView.g.cs
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\MemberView.g.cs
-D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\NotificationView.g.cs
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\RegisterView.g.cs
-D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ReportView.g.cs
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\App.g.cs
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project_MarkupCompile.cache
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project_MarkupCompile.lref
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\App.baml
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\MainWindow.baml
-D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ChatView.baml
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\EventView.baml
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\HomeView.baml
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\LoginView.baml
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\MemberView.baml
-D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\NotificationView.baml
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\RegisterView.baml
-D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ReportView.baml
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project.g.resources
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project.GeneratedMSBuildEditorConfig.editorconfig
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project.AssemblyInfoInputs.cache
@@ -342,3 +336,9 @@ H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-wind
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\PRN212_Project.pdb
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\PRN212_Project.genruntimeconfig.cache
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\ref\PRN212_Project.dll
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ChatView.g.cs
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\NotificationView.g.cs
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ReportView.g.cs
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ChatView.baml
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\NotificationView.baml
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ReportView.baml

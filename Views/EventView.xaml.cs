@@ -8,6 +8,7 @@ namespace PRN212_Project.Views
     {
         private PrnprojectContext con = new PrnprojectContext();
         private Event selectedEvent;
+        private User currentUser;        
 
         public EventView()
         {

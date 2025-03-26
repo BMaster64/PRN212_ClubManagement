@@ -33,6 +33,9 @@
     <Page Update="Theme\TextBoxTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\ChatView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\EventView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -45,7 +48,13 @@
     <Page Update="Views\MemberView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\NotificationView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\RegisterView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ReportView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

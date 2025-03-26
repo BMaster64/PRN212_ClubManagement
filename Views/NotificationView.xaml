@@ -65,33 +65,48 @@
                                                 <RowDefinition Height="Auto" />
                                                 <RowDefinition Height="Auto" />
                                             </Grid.RowDefinitions>
+                                          <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                          </Grid.ColumnDefinitions>
                                             <Grid.InputBindings>
                                                 <MouseBinding MouseAction="LeftClick" 
                                                               Command="{Binding DataContext.MarkAsReadCommand, 
                                                               RelativeSource={RelativeSource AncestorType=ItemsControl}}" 
                                                               CommandParameter="{Binding}" />
                                             </Grid.InputBindings>
-                                            <StackPanel Grid.Row="0" Orientation="Horizontal">
-                                                <TextBlock Text="{Binding Title}" FontWeight="SemiBold" />
-                                                <Ellipse Width="10" Height="10" Fill="#4285F4" Margin="10,0,0,0" 
-                                                         Visibility="{Binding IsRead, Converter={StaticResource InverseBoolToVisibilityConverter}}" />
-                                            </StackPanel>
-                                            <TextBlock Grid.Row="2" Text="{Binding CreatedAt, StringFormat='{}{0:dd MMM yyyy, HH:mm}'}" 
-                                                       FontSize="11" Foreground="#666" Margin="0,5,0,0" />
+                                          <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Title}" FontWeight="SemiBold" />
+                                            <Ellipse Width="10" Height="10" Fill="#4285F4" Margin="10,0,0,0"
+                                                     Visibility="{Binding IsRead, Converter={StaticResource InverseBoolToVisibilityConverter}}" />
+                                          </StackPanel>
+                                          <TextBlock Grid.Row="2" Grid.Column="0"
+                                                     Text="{Binding CreatedAt, StringFormat='{}{0:dd MMM yyyy, HH:mm}'}"
+                                                     FontSize="11" Foreground="#666" Margin="0,5,0,0" />
+                                          <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal"
+                                                        Visibility="{Binding DataContext.CanCreateNotification, 
+                                                        RelativeSource={RelativeSource AncestorType=ItemsControl}, 
+                                                        Converter={StaticResource BoolToVisibilityConverter}}">
+                                            <Button Content="Edit"
+                                                    Command="{Binding DataContext.StartEditCommand, 
+                                                        RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                                    CommandParameter="{Binding}"
+                                                    Margin="0,0,5,0"
+                                                    Padding="5,2" />
+                                            <Button Content="Delete"
+                                                    Command="{Binding DataContext.DeleteNotificationCommand, 
+                                                        RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                                    CommandParameter="{Binding}"
+                                                    Padding="5,2"
+                                                    Background="IndianRed"
+                                                    Foreground="White" />
+                                          </StackPanel>
                                         </Grid>
                                     </Border>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
                     </ScrollViewer>
-
-                    <!-- Empty state -->
-                    <TextBlock Text="No notifications" 
-                               HorizontalAlignment="Center" 
-                               VerticalAlignment="Center" 
-                               Foreground="#888" 
-                               FontSize="16"
-                               Visibility="{Binding HasNotifications, Converter={StaticResource InverseBoolToVisibilityConverter}}" />
 
                     <!-- Loading indicator -->
                     <Border Background="#80FFFFFF" 
@@ -132,7 +147,42 @@
                     </StackPanel>
                 </Grid>
             </Border>
+          <!-- Edit Notification Form (Add this to the existing Create Notification Form section) -->
+          <Border BorderThickness="0" BorderBrush="#E0E0E0" Background="White"
+                  Visibility="{Binding IsEditMode, Converter={StaticResource BoolToVisibilityConverter}}">
+            <Grid Margin="20">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
 
+              <TextBlock Grid.Row="0" Text="Edit Notification" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" />
+
+              <TextBlock Grid.Row="1" Text="Title:" FontWeight="SemiBold" Margin="0,0,0,5" />
+              <TextBox Grid.Row="2" Text="{Binding NotificationTitle, UpdateSourceTrigger=PropertyChanged}" Padding="5" Margin="0,0,0,15" />
+
+              <TextBlock Grid.Row="3" Text="Content:" FontWeight="SemiBold" Margin="0,0,0,5" />
+              <TextBox Grid.Row="4" Text="{Binding NotificationContent, UpdateSourceTrigger=PropertyChanged}"
+                       TextWrapping="Wrap" AcceptsReturn="True" Height="200" Padding="5" Margin="0,0,0,20" />
+
+              <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Cancel"
+                        Command="{Binding CancelCreateCommand}"
+                        Padding="15,8"
+                        Margin="0,0,10,0"
+                        Background="LightGray" />
+                <Button Content="Update"
+                        Command="{Binding UpdateNotificationCommand}"
+                        Padding="15,8"
+                        Background="#4285F4"
+                        Foreground="White" />
+              </StackPanel>
+            </Grid>
+          </Border>
             <!-- Notification Detail -->
             <Border Background="White" 
                     BorderThickness="1" 
