@@ -9,6 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewModels\ChatViewModel.cs" />
+    <Compile Remove="ViewModels\NotificationViewModel.cs" />
+    <Compile Remove="ViewModels\ReportViewModel.cs" />
+    <Compile Remove="Views\ChatView.xaml.cs" />
+    <Compile Remove="Views\NotificationView.xaml.cs" />
+    <Compile Remove="Views\ReportView.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Views\ChatView.xaml" />
+    <Page Remove="Views\NotificationView.xaml" />
+    <Page Remove="Views\ReportView.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2">
       <PrivateAssets>all</PrivateAssets>

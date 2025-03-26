@@ -5,42 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRN212_Project.Views"
         mc:Ignorable="d"
-        Title="HomeView" Height="600" Width="900"
+        Title="HomeView"
+        Height="auto"
+        Width="900"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="None" ResizeMode="NoResize">
+        WindowStyle="None"
+        ResizeMode="NoResize">
+
     <Grid>
         <!-- Header -->
         <Border Background="#2C3E50" Height="50" VerticalAlignment="Top" MouseLeftButtonDown="DragWindow">
             <Grid>
                 <TextBlock Text="{Binding ClubName}" 
-                   FontSize="20" 
-                   FontWeight="Bold" 
-                   Foreground="White" 
-                   VerticalAlignment="Center"
-                   Margin="205,0,0,0"
-                   HorizontalAlignment="Left" Width="620"/>
+                           FontSize="20" 
+                           FontWeight="Bold" 
+                           Foreground="White" 
+                           VerticalAlignment="Center"
+                           Margin="205,0,0,0"
+                           HorizontalAlignment="Left"
+                           Width="620"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Content="_" Width="30" Height="30" VerticalAlignment="Center" Margin="0,0,5,0" Click="MinimizeButton_Click" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="20"/>
-                    <Button Content="X" Width="30" Height="30" VerticalAlignment="Center" Margin="0,0,10,0" Click="CloseButton_Click" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="20"/>
+                    <Button Content="_" Width="30" Height="30" VerticalAlignment="Center" Margin="0,0,5,0" 
+                            Click="MinimizeButton_Click" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="20"/>
+                    <Button Content="X" Width="30" Height="30" VerticalAlignment="Center" Margin="0,0,10,0" 
+                            Click="CloseButton_Click" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="20"/>
                 </StackPanel>
             </Grid>
         </Border>
 
         <!-- Left Navigation Bar -->
-        <DockPanel Width="200" Background="#2C3E50" Margin="0,0,700,0">
-            <StackPanel Margin="10" Height="582">
+        <DockPanel Width="200" Background="#2C3E50" Margin="0,50,700,0" VerticalAlignment="Top">
+            <!-- Ở đây mình để Margin="0,50,700,0" 
+                 nghĩa là 50 px bên dưới header, 
+                 700 px cho chiều rộng “thay” cho 
+                 ContentControl. (Giữ như code bạn có) -->
+
+            <StackPanel Margin="10" Height="532">
                 <TextBlock Text="Navigation" FontSize="28" FontWeight="Bold" Foreground="White" Margin="10"/>
 
-                <Button Content="Notification" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Notification'/>
-                <Button Content="Member" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Member'/>
-                <Button Content="Event" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Event'/>
-                <Button Content="Chat" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Chat'/>
-                <Button Content="Report" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Report' Visibility="{Binding ReportTabVisibility}"/>
-                <Button Content="Log Out" Style="{StaticResource NavButtonStyle}" Click="LogOutButton_Click" Margin="20, 330, 20, 0" Background="DarkRed"/>
+                <!--<Button Content="Notification" Style="{StaticResource NavButtonStyle}"
+                        Command="{Binding NavigateCommand}" CommandParameter='Notification'/>-->
+                <Button Content="Member" Style="{StaticResource NavButtonStyle}"
+                        Command="{Binding NavigateCommand}" CommandParameter='Member'/>
+                <Button Content="Event" Style="{StaticResource NavButtonStyle}"
+                        Command="{Binding NavigateCommand}" CommandParameter='Event'/>
+                <!--<Button Content="Chat" Style="{StaticResource NavButtonStyle}"
+                        Command="{Binding NavigateCommand}" CommandParameter='Chat'/>
+                <Button Content="Report" Style="{StaticResource NavButtonStyle}"
+                        Command="{Binding NavigateCommand}" CommandParameter='Report'
+                        Visibility="{Binding ReportTabVisibility}"/>-->
+                <Button Content="Log Out" Style="{StaticResource NavButtonStyle}"
+                        Click="LogOutButton_Click" Margin="20, 330, 20, 0" Background="DarkRed"/>
             </StackPanel>
         </DockPanel>
 
-        <!-- Main Content Area -->
-        <ContentControl Content="{Binding CurrentView}" Margin="200,0,0,0"/>
+        <!-- Main Content Area (bọc ScrollViewer) -->
+        <ScrollViewer Margin="200,50,0,0" VerticalScrollBarVisibility="Auto">
+            <ContentControl Content="{Binding CurrentView}" />
+        </ScrollViewer>
     </Grid>
 </Window>

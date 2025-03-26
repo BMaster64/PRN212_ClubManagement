@@ -1,12 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using PRN212_Project;
 using PRN212_Project.Models;
-using PRN212_Project.ViewModels;
 using PRN212_Project.Views;
-using System;
 using System.ComponentModel;
 using System.Windows;
-using System.Windows.Input;
 
 public class HomeViewModel : INotifyPropertyChanged
 {
@@ -45,7 +42,7 @@ public class HomeViewModel : INotifyPropertyChanged
             MessageBox.Show("Current user not set properly");
         }
         // Default view
-        CurrentView = new NotificationView();
+        //CurrentView = new NotificationView();
 
         // Only show Report tab for UserType 1, 2, or 3
         ReportTabVisibility = (currentUser.RoleId >= 1 && currentUser.RoleId <= 3)
@@ -62,18 +59,18 @@ public class HomeViewModel : INotifyPropertyChanged
             case "Member":
                 CurrentView = new MemberView { DataContext = new MemberViewModel(_currentUser) };
                 break;
-            case "Notification":
-                CurrentView = new NotificationView { DataContext = new NotificationViewModel(_currentUser) };
-                break;
+            //case "Notification":
+            //    CurrentView = new NotificationView { DataContext = new NotificationViewModel(_currentUser) };
+            //    break;
             case "Event":
                 CurrentView = new EventView();
                 break;
-            case "Chat":
-                CurrentView = new ChatView();
-                break;
-            case "Report":
-                CurrentView = new ReportView() { DataContext = new ReportViewModel(_currentUser) };
-                break;
+                //case "Chat":
+                //    CurrentView = new ChatView();
+                //    break;
+                //case "Report":
+                //    CurrentView = new ReportView() { DataContext = new ReportViewModel(_currentUser) };
+                //    break;
         }
     }
 
