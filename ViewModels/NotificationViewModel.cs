@@ -65,7 +65,7 @@ namespace PRN212_Project.ViewModels
             Notifications = new ObservableCollection<UserNotificationDto>();
 
             // Set permission based on role ID (1, 2, or 3 can create)
-            CanCreateNotification = currentUser.RoleId <= 3;
+            CanCreateNotification = currentUser.RoleId <= 3 || currentUser.RoleId == 5;
 
             // Initialize commands
             LoadNotificationsCommand = new AsyncRelayCommand(LoadNotificationsAsync);
@@ -233,7 +233,7 @@ namespace PRN212_Project.ViewModels
 
                 // Get all users in the club to create user notifications for each
                 var clubMembers = await _context.Users
-                    .Where(u => u.ClubId == _currentUser.ClubId && u.Status)
+                    .Where(u => (u.ClubId == _currentUser.ClubId && u.Status) || u.RoleId == 5)
                     .ToListAsync();
 
                 // Create user notifications for each club member
@@ -375,7 +375,7 @@ namespace PRN212_Project.ViewModels
                 }
 
                 // Only allow deletion for the sender or users with roles 1-3
-                if (originalNotification.SenderId != _currentUser.StudentId && _currentUser.RoleId > 3)
+                if (originalNotification.SenderId != _currentUser.StudentId && (_currentUser.RoleId > 3 && _currentUser.RoleId != 5))
                 {
                     MessageBox.Show("You don't have permission to delete this notification.",
                         "Permission Denied",

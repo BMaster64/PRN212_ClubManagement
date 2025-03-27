@@ -92,15 +92,6 @@
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
                     </ScrollViewer>
-
-                    <!-- Empty state -->
-                    <TextBlock Text="No reports" 
-                               HorizontalAlignment="Center" 
-                               VerticalAlignment="Center" 
-                               Foreground="#888" 
-                               FontSize="16"
-                               Visibility="{Binding HasReports, Converter={StaticResource InverseBoolToVisibilityConverter}}" />
-
                     <!-- Loading indicator -->
                     <Border Background="#80FFFFFF" 
                             Visibility="{Binding IsLoading, Converter={StaticResource BoolToVisibilityConverter}}">

@@ -66,9 +66,9 @@ namespace PRN212_Project.ViewModels
             Reports = new ObservableCollection<UserReportDto>();
 
             // Set permission based on role ID (only role 3 can create reports)
-            CanCreateReport = currentUser.RoleId == 3;
+            CanCreateReport = currentUser.RoleId == 3 || currentUser.RoleId == 5;
             // Set status change permission for roles 1 and 2
-            CanChangeReportStatus = currentUser.RoleId == 1 || currentUser.RoleId == 2;
+            CanChangeReportStatus = currentUser.RoleId == 1 || currentUser.RoleId == 2 || currentUser.RoleId == 5;
             // Initialize status options
             ReportStatusOptions = new ObservableCollection<string>
             {
@@ -274,7 +274,7 @@ namespace PRN212_Project.ViewModels
 
                 // Get all users in the club with RoleId 1 or 2 to create user reports for each
                 var clubAdmins = await _context.Users
-                    .Where(u => u.ClubId == _currentUser.ClubId && (u.RoleId == 1 || u.RoleId == 2 || u.RoleId == 3) && u.Status)
+                    .Where(u => (u.ClubId == _currentUser.ClubId && (u.RoleId == 1 || u.RoleId == 2 || u.RoleId == 3) && u.Status) || u.RoleId == 5)
                     .ToListAsync();
 
                 // Create user reports for each club admin (RoleId 1 or 2)

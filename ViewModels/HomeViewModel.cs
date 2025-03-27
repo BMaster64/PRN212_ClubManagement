@@ -12,6 +12,9 @@ public class HomeViewModel : INotifyPropertyChanged
     private object _currentView;
     private Visibility _reportTabVisibility;
     private string _clubName;
+    private Visibility _adminVisibility;
+    private Visibility _chatTabVisibility;
+
     public string ClubName
     {
         get { return _clubName; }
@@ -28,6 +31,16 @@ public class HomeViewModel : INotifyPropertyChanged
         get { return _reportTabVisibility; }
         set { _reportTabVisibility = value; OnPropertyChanged(nameof(ReportTabVisibility)); }
     }
+    public Visibility ChatTabVisibility
+    {
+        get { return _chatTabVisibility; }
+        set { _chatTabVisibility = value; OnPropertyChanged(nameof(ChatTabVisibility)); }
+    }
+    public Visibility AdminVisibility
+    {
+        get { return _adminVisibility; }
+        set { _adminVisibility = value; OnPropertyChanged(nameof(AdminVisibility)); }
+    }
 
     public RelayCommand<string> NavigateCommand { get; }
 
@@ -43,13 +56,26 @@ public class HomeViewModel : INotifyPropertyChanged
             MessageBox.Show("Current user not set properly");
         }
         // Default view
-        //CurrentView = new NotificationView();
-
-        // Only show Report tab for UserType 1, 2, or 3
-        ReportTabVisibility = (currentUser.RoleId >= 1 && currentUser.RoleId <= 3)
+        if (currentUser.RoleId == 5)
+        {
+            CurrentView = new ClubView { DataContext = new ClubViewModel(_currentUser) };
+        }
+        else
+        {
+            CurrentView = new NotificationView { DataContext = new NotificationViewModel(_currentUser) };
+        }
+        // Only show Report tab for UserType 1, 2, or 3 or 5
+        ReportTabVisibility = (currentUser.RoleId != 4)
             ? Visibility.Visible
             : Visibility.Collapsed;
-
+        // Only show Report tab for UserType 1, 2, or 3 or 4
+        ChatTabVisibility = (currentUser.RoleId != 5)
+            ? Visibility.Visible
+            : Visibility.Collapsed;
+        // Set admin visibility based on role
+        AdminVisibility = (currentUser.RoleId == 5)
+            ? Visibility.Visible
+            : Visibility.Collapsed;
         NavigateCommand = new RelayCommand<string>(ChangeView);
     }
 
@@ -64,16 +90,25 @@ public class HomeViewModel : INotifyPropertyChanged
                 CurrentView = new NotificationView { DataContext = new NotificationViewModel(_currentUser) };
                 break;
             case "Event":
-                CurrentView = new EventView { DataContext = new NotificationViewModel(_currentUser) };
+                CurrentView = new EventView();
                 break;
             case "Chat":
-                CurrentView = new ChatView();
+                CurrentView = new ChatView { DataContext = new ChatViewModel(_currentUser) };
                 break;
             case "Report":
-                CurrentView = new ReportView() { DataContext = new ReportViewModel(_currentUser) };
+                CurrentView = new ReportView { DataContext = new ReportViewModel(_currentUser) };
                 break;
-            default:
-                CurrentView = new NotificationView { DataContext = new NotificationViewModel(_currentUser) };
+            case "ClubManagement":
+                if (_currentUser.RoleId == 5)
+                {
+                    CurrentView = new ClubView { DataContext = new ClubViewModel(_currentUser) };
+                }
+                break;
+            case "ClubRequests":
+                if (_currentUser.RoleId == 5)
+                {
+                    CurrentView = new ClubRequestsView { DataContext = new ClubRequestsViewModel() };
+                }
                 break;
         }
     }

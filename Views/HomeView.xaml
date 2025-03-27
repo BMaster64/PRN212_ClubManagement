@@ -39,9 +39,20 @@
                 <Button Content="Notification" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Notification'/>
                 <Button Content="Member" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Member'/>
                 <Button Content="Event" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Event'/>
-                <Button Content="Chat" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Chat'/>
+                <Button Content="Chat" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Chat' Visibility="{Binding ChatTabVisibility}"/>
                 <Button Content="Report" Style="{StaticResource NavButtonStyle}" Command="{Binding NavigateCommand}" CommandParameter='Report' Visibility="{Binding ReportTabVisibility}"/>
-                <Button Content="Log Out" Style="{StaticResource NavButtonStyle}" Click="LogOutButton_Click" Margin="20, 330, 20, 0" Background="DarkRed"/>
+                <!-- Admin-specific buttons -->
+                <StackPanel Visibility="{Binding AdminVisibility}">
+                    <Button Content="Club Management" 
+                Style="{StaticResource NavButtonStyle}" 
+                Command="{Binding NavigateCommand}" 
+                CommandParameter='ClubManagement'/>
+                    <Button Content="Club Requests" 
+                Style="{StaticResource NavButtonStyle}" 
+                Command="{Binding NavigateCommand}" 
+                CommandParameter='ClubRequests'/>
+                </StackPanel>
+                <Button Content="Log Out" Style="{StaticResource NavButtonStyle}" Click="LogOutButton_Click" Margin="20, 250, 20, 0" Foreground="Red" FontWeight="Bold" FontSize="20"/>
             </StackPanel>
         </DockPanel>
 

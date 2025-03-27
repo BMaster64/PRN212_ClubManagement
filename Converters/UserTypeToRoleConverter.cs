@@ -16,6 +16,7 @@ namespace PRN212_Project.Converters
                     2 => "Phó chủ nhiệm",
                     3 => "Trưởng ban",
                     4 => "Thành viên",
+                    5 => "Admin",
                     _ => "Unknown"
                 };
             }

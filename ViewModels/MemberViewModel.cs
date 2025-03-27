@@ -57,7 +57,7 @@ public partial class MemberViewModel : ObservableObject
         _dbContext = new PrnprojectContext();
         Members = new ObservableCollection<User>();
         AvailableUserTypes = new ObservableCollection<int>();
-        CanAddMembers = _currentUser.RoleId <= 3;
+        CanAddMembers = _currentUser.RoleId <= 3 || _currentUser.RoleId == 5;
 
         LoadMembersCommand = new AsyncRelayCommand(LoadMembersAsync);
         CreateMemberCommand = new AsyncRelayCommand(CreateMemberAsync);
@@ -89,7 +89,7 @@ public partial class MemberViewModel : ObservableObject
     private async Task LoadMembersAsync()
     {
         var query = _dbContext.Users
-            .Where(u => u.ClubId == _currentUser.ClubId && u.Status == true)
+            .Where(u => u.ClubId == _currentUser.ClubId && u.Status == true && u.RoleId < 5)
             .OrderBy(u => u.RoleId);
 
         var membersList = await query.ToListAsync();
@@ -105,9 +105,19 @@ public partial class MemberViewModel : ObservableObject
     {
         AvailableUserTypes.Clear();
         // Add available user types based on current user's type
-        for (int i = _currentUser.RoleId; i <= 4; i++)
+        if (_currentUser.RoleId != 5)
         {
-            AvailableUserTypes.Add(i);
+            for (int i = _currentUser.RoleId; i <= 4; i++)
+            {
+                AvailableUserTypes.Add(i);
+            }
+        }
+        else
+        {
+            for (int i = 1; i <= 4; i++)
+            {
+                AvailableUserTypes.Add(i);
+            }
         }
     }
 
@@ -176,9 +186,12 @@ public partial class MemberViewModel : ObservableObject
 
         if (member.RoleId < _currentUser.RoleId || _currentUser.RoleId == 4)
         {
-            MessageBox.Show("You don't have permission to edit this user.",
-                "Permission Denied", MessageBoxButton.OK, MessageBoxImage.Warning);
-            return;
+            if (_currentUser.RoleId != 5)
+            {
+                MessageBox.Show("You don't have permission to edit this user.",
+                    "Permission Denied", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
         }
         // Set selected member for editing
         SelectedMember = member;
@@ -251,7 +264,7 @@ public partial class MemberViewModel : ObservableObject
     {
         if (member == null) return;
 
-        if (member.RoleId < _currentUser.RoleId || _currentUser.RoleId == 4)
+        if (member.RoleId < _currentUser.RoleId || _currentUser.RoleId == 4 || _currentUser.RoleId != 5)
         {
             MessageBox.Show("You don't have permission to disable this user.",
                 "Permission Denied", MessageBoxButton.OK, MessageBoxImage.Warning);

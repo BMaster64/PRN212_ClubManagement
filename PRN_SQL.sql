@@ -138,6 +138,17 @@ CREATE TABLE ChatMessage (
     CONSTRAINT FK_ChatMessage_Channel FOREIGN KEY (ChannelId) REFERENCES ChatChannel(ChannelId)
 );
 
+-- Create ClubRegistrationRequest Table
+CREATE TABLE ClubRegistrationRequest (
+    RequestId INT PRIMARY KEY IDENTITY(1,1),
+    ClubName NVARCHAR(MAX) NOT NULL,
+    PresidentStudentId NVARCHAR(MAX) NOT NULL,
+    PresidentFullName NVARCHAR(MAX) NOT NULL,
+    PresidentUsername NVARCHAR(MAX) NOT NULL,
+    RequestedAt DATETIME NOT NULL DEFAULT GETDATE(),
+    Status INT NOT NULL
+);
+
 -- Insert a default channel for each club
 INSERT INTO ChatChannel (ChannelName, ClubId)
 SELECT CONCAT(ClubName, ' General'), ClubId FROM Club;

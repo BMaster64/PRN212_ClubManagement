@@ -23,6 +23,8 @@ public partial class PrnprojectContext : DbContext
 
     public virtual DbSet<Club> Clubs { get; set; }
 
+    public virtual DbSet<ClubRegistrationRequest> ClubRegistrationRequests { get; set; }
+
     public virtual DbSet<Event> Events { get; set; }
 
     public virtual DbSet<EventRegistration> EventRegistrations { get; set; }
@@ -95,6 +97,17 @@ public partial class PrnprojectContext : DbContext
             entity.ToTable("Club");
 
             entity.Property(e => e.ClubName).HasMaxLength(255);
+        });
+
+        modelBuilder.Entity<ClubRegistrationRequest>(entity =>
+        {
+            entity.HasKey(e => e.RequestId).HasName("PK__ClubRegi__33A8517A47C6B66F");
+
+            entity.ToTable("ClubRegistrationRequest");
+
+            entity.Property(e => e.RequestedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
         });
 
         modelBuilder.Entity<Event>(entity =>
@@ -212,7 +225,6 @@ public partial class PrnprojectContext : DbContext
 
             entity.HasOne(d => d.Club).WithMany(p => p.Users)
                 .HasForeignKey(d => d.ClubId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_User_Club");
         });
 
@@ -260,24 +272,4 @@ public partial class PrnprojectContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-    public int GetNextClubId()
-    {
-        // If there are no clubs, start with club ID 1
-        if (!Clubs.Any())
-        {
-            return 1;
-        }
-
-        // Get the highest ClubId currently in use
-        int maxClubId = Clubs.Max(c => c.ClubId);
-        return maxClubId + 1;
-    }
-
-    // Method to create new club and return its ID
-    public async Task<int> CreateClubAsync(Club club)
-    {
-        Clubs.Add(club);
-        await SaveChangesAsync();
-        return club.ClubId;
-    }
 }

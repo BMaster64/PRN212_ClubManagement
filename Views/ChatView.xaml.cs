@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using PRN212_Project.Models;
 using PRN212_Project.ViewModels;
 
 namespace PRN212_Project.Views
@@ -11,6 +12,11 @@ namespace PRN212_Project.Views
         {
             InitializeComponent();
             this.Loaded += ChatView_Loaded;
+            // Get the current user from the application state
+            var currentUser = App.Current.Properties["CurrentUser"] as User;
+
+            // Set the DataContext
+            DataContext = new ChatViewModel(currentUser);
         }
 
         private void ChatView_Loaded(object sender, RoutedEventArgs e)

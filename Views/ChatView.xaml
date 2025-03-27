@@ -9,9 +9,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="550" d:DesignWidth="700">
 
-    <UserControl.DataContext>
-        <viewmodels:ChatViewModel />
-    </UserControl.DataContext>
     <UserControl.Resources>
         <converters:MessageAlignmentConverter x:Key="MessageAlignmentConverter"/>
         <converters:MessageColorConverter x:Key="MessageColorConverter"/>

@@ -12,7 +12,7 @@ using System.Windows.Threading;
 
 namespace PRN212_Project.ViewModels
 {
-    public class ChatViewModel : INotifyPropertyChanged
+    public partial class ChatViewModel : INotifyPropertyChanged
     {
         private readonly User _currentUser;
         private readonly PrnprojectContext _context;
@@ -41,9 +41,9 @@ namespace PRN212_Project.ViewModels
         public ICommand SendMessageCommand { get; }
         public ICommand RefreshCommand { get; }
 
-        public ChatViewModel()
+        public ChatViewModel(User currentUser)
         {
-            _currentUser = (Application.Current as App)?.GetCurrentUser();
+            _currentUser = currentUser;
             _context = new PrnprojectContext();
 
             SendMessageCommand = new RelayCommand(SendMessage, () => CanSendMessage());

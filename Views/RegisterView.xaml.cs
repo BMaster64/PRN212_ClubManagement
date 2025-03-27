@@ -67,38 +67,32 @@ namespace PRN212_Project.Views
                 MessageBox.Show("Student ID already exists in the system!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-
-            // Create club object
-            var newClub = new Club
+            var clubRequest = new ClubRegistrationRequest
             {
-                ClubName = enteredClubName
+                ClubName = enteredClubName,
+                PresidentStudentId = enteredStudentId,
+                PresidentFullName = enteredFullName,
+                PresidentUsername = enteredUsername,
+                RequestedAt = DateTime.Now,
+                Status = 1
             };
 
-            // Create user object
-            User newUser = new User
+            try
             {
-                StudentId = enteredStudentId,
-                FullName = enteredFullName,
-                Username = enteredUsername,
-                Password = enteredPassword,
-                RoleId = 1, // Club President
-                CreatedAt = DateTime.Now,
-                Status = true // Set default status to active
-            };
+                _dbContext.ClubRegistrationRequests.Add(clubRequest);
+                await _dbContext.SaveChangesAsync();
 
-            // Register user with new club
-            bool isRegistered = await _authService.RegisterWithClubAsync(newUser, newClub);
+                MessageBox.Show($"Club registration request for {enteredClubName} has been submitted. " +
+                    "An admin will review your request.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
-            if (isRegistered)
-            {
-                MessageBox.Show($"Registration successful! You are now the president of {enteredClubName}.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                 LoginView loginView = new LoginView();
                 loginView.Show();
                 this.Close();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Registration failed. Please try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Failed to submit registration request: {ex.Message}",
+                    "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

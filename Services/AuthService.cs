@@ -26,6 +26,7 @@ public class AuthService
                 2 => "Phó chủ nhiệm",
                 3 => "Trưởng ban",
                 4 => "Thành viên",
+                5 => "Admin",
                 _ => "Unknown"
             };
 
@@ -39,16 +40,9 @@ public class AuthService
         }
     }
 
-    private static string HashPassword(string password)
+    private static bool VerifyPassword(string enteredPassword, string password)
     {
-        using var sha256 = SHA256.Create();
-        byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-        return Convert.ToBase64String(bytes);
-    }
-
-    private static bool VerifyPassword(string enteredPassword, string storedHash)
-    {
-        return HashPassword(enteredPassword) == storedHash;
+        return enteredPassword == password;
     }
 
     public async Task<bool> UsernameExistsAsync(string username)
@@ -76,7 +70,7 @@ public class AuthService
 
             // Set the user's ClubId to the newly created club's ID
             user.ClubId = club.ClubId;
-            user.Password = HashPassword(user.Password); // Hash the password before saving
+            user.Password = user.Password; // Hash the password before saving
             user.Status = true;
 
             // Now add the user
@@ -98,7 +92,7 @@ public class AuthService
         using var db = new PrnprojectContext();
         try
         {
-            user.Password = HashPassword(user.Password); // Hash the password before saving
+            user.Password = user.Password; // Hash the password before saving
             db.Users.Add(user);
             await db.SaveChangesAsync();
             return true;
