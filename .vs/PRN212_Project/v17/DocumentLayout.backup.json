@@ -7,36 +7,128 @@
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\eventview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\notificationview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\notificationview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\notificationview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\notificationview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\memberview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\memberview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\eventview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\eventview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\eventviewmodel.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\eventviewmodel.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\eventview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\eventview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\notificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\notificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\notificationview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\notificationview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\converters\\stringformatconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\stringformatconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\converters\\statustocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\statustocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\converters\\inverseboolconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\inverseboolconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\notificationview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\notificationview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\reportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\reportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\converters\\inversebooltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\inversebooltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\converters\\booltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\booltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\models\\club.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:models\\club.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\homeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\chatview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\chatview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\chatview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\chatview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\memberview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\memberview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\registerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\registerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\reportview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\reportview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\memberviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\memberviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\converters\\booltocommandconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\booltocommandconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\models\\prnprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:models\\prnprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\models\\participationclassification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:models\\participationclassification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,44 +143,16 @@
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:models\\usernotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\memberviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\memberviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\memberview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\memberview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\reportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\reportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\converters\\inversebooltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\inversebooltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\prn_sql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:prn_sql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -99,48 +163,12 @@
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\booltostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\converters\\inverseboolconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\inverseboolconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\converters\\booltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\booltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\models\\prnprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:models\\prnprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\models\\participationclassification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:models\\participationclassification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\notificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\notificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\models\\club.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:models\\club.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\registerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -151,16 +179,8 @@
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\rolepermissiontovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\converters\\booltocommandconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\booltocommandconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\converters\\usertypetoroleconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:converters\\usertypetoroleconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\prn212_project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -181,8 +201,12 @@
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\prn_sql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:prn_sql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\views\\notificationview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\notificationview.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|h:\\fpt aint shit\\prn212\\finalproject\\prn212_clubmanagement\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -192,37 +216,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 59,
+          "SelectedChildIndex": 30,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NotificationView.xaml.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\NotificationView.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\NotificationView.xaml.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\NotificationView.xaml.cs",
-              "RelativeToolTip": "Views\\NotificationView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T04:05:13.98Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NotificationView.xaml",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\NotificationView.xaml",
-              "RelativeDocumentMoniker": "Views\\NotificationView.xaml",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\NotificationView.xaml",
-              "RelativeToolTip": "Views\\NotificationView.xaml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-26T04:05:14.36Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -258,19 +256,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:5:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:6:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
               "$type": "Bookmark",
@@ -285,58 +275,461 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 6,
+              "Title": "StatusToColorConverter.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\StatusToColorConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\StatusToColorConverter.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\StatusToColorConverter.cs",
+              "RelativeToolTip": "Converters\\StatusToColorConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:35:34.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StringFormatConverter.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\StringFormatConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\StringFormatConverter.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\StringFormatConverter.cs",
+              "RelativeToolTip": "Converters\\StringFormatConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:16:32.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NotificationView.xaml",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\NotificationView.xaml",
+              "RelativeDocumentMoniker": "Views\\NotificationView.xaml",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\NotificationView.xaml",
+              "RelativeToolTip": "Views\\NotificationView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-27T12:09:06.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "NotificationView.xaml",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\NotificationView.xaml",
+              "RelativeDocumentMoniker": "Views\\NotificationView.xaml",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\NotificationView.xaml",
+              "RelativeToolTip": "Views\\NotificationView.xaml",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAuwJYAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-26T04:05:14.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ReportViewModel.cs",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\ReportViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ReportViewModel.cs",
               "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\ReportViewModel.cs",
               "RelativeToolTip": "ViewModels\\ReportViewModel.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAUwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T01:34:47.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T01:34:47.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BoolToVisibilityConverter.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\BoolToVisibilityConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\BoolToVisibilityConverter.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\BoolToVisibilityConverter.cs",
+              "RelativeToolTip": "Converters\\BoolToVisibilityConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T14:29:09.432Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "InverseBoolConverter.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\InverseBoolConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\InverseBoolConverter.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\InverseBoolConverter.cs",
+              "RelativeToolTip": "Converters\\InverseBoolConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T07:19:33.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "InverseBoolToVisibilityConverter.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\InverseBoolToVisibilityConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\InverseBoolToVisibilityConverter.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\InverseBoolToVisibilityConverter.cs",
+              "RelativeToolTip": "Converters\\InverseBoolToVisibilityConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T14:29:34.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotificationViewModel.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\NotificationViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\NotificationViewModel.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\NotificationViewModel.cs",
+              "RelativeToolTip": "ViewModels\\NotificationViewModel.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAqwAoBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T15:45:33.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T14:33:18.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HomeViewModel.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\HomeViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\HomeViewModel.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\HomeViewModel.cs",
+              "RelativeToolTip": "ViewModels\\HomeViewModel.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAswEIAAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T09:04:51.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NotificationView.xaml.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\NotificationView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\NotificationView.xaml.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\NotificationView.xaml.cs",
+              "RelativeToolTip": "Views\\NotificationView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T04:05:13.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EventView.xaml",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\EventView.xaml",
+              "RelativeDocumentMoniker": "Views\\EventView.xaml",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\EventView.xaml",
+              "RelativeToolTip": "Views\\EventView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-20T10:18:37.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "User.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA6wBcAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T15:11:30.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EventView.xaml.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\EventView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\EventView.xaml.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\EventView.xaml.cs",
+              "RelativeToolTip": "Views\\EventView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T10:21:00.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "EventViewModel.cs.cs",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\EventViewModel.cs.cs",
               "RelativeDocumentMoniker": "ViewModels\\EventViewModel.cs.cs",
               "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\EventViewModel.cs.cs",
               "RelativeToolTip": "ViewModels\\EventViewModel.cs.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAA3wBgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAALUAAAAAAAAAAAAowM4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T00:56:40.937Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Club.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\Club.cs",
+              "RelativeDocumentMoniker": "Models\\Club.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\Club.cs",
+              "RelativeToolTip": "Models\\Club.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAYwBkAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T15:29:24.193Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "PRN_SQL.sql ",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\PRN_SQL.sql",
-              "RelativeDocumentMoniker": "PRN_SQL.sql",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\PRN_SQL.sql",
-              "RelativeToolTip": "PRN_SQL.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-03-24T15:36:08.803Z",
+              "Title": "RegisterView.xaml",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\RegisterView.xaml",
+              "RelativeDocumentMoniker": "Views\\RegisterView.xaml",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\RegisterView.xaml",
+              "RelativeToolTip": "Views\\RegisterView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-26T06:31:25.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ReportView.xaml",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\ReportView.xaml",
+              "RelativeDocumentMoniker": "Views\\ReportView.xaml",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\ReportView.xaml",
+              "RelativeToolTip": "Views\\ReportView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-26T06:10:31.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HomeView.xaml",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\HomeView.xaml",
+              "RelativeDocumentMoniker": "Views\\HomeView.xaml",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\HomeView.xaml",
+              "RelativeToolTip": "Views\\HomeView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-16T08:36:58.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MemberView.xaml",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\MemberView.xaml",
+              "RelativeDocumentMoniker": "Views\\MemberView.xaml",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\MemberView.xaml",
+              "RelativeToolTip": "Views\\MemberView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-20T10:18:03.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ChatView.xaml",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\ChatView.xaml",
+              "RelativeDocumentMoniker": "Views\\ChatView.xaml",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\ChatView.xaml",
+              "RelativeToolTip": "Views\\ChatView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-26T06:10:40.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ChatView.xaml.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\ChatView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\ChatView.xaml.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\ChatView.xaml.cs",
+              "RelativeToolTip": "Views\\ChatView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T06:33:43.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "HomeView.xaml.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\HomeView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\HomeView.xaml.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\HomeView.xaml.cs",
+              "RelativeToolTip": "Views\\HomeView.xaml.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T08:36:41.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LoginView.xaml",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\LoginView.xaml",
+              "RelativeDocumentMoniker": "Views\\LoginView.xaml",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\LoginView.xaml",
+              "RelativeToolTip": "Views\\LoginView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T14:13:15.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "AssemblyInfo.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\AssemblyInfo.cs",
+              "RelativeToolTip": "AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T14:11:09.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAYwBUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T15:46:51.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-19T13:55:36.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "MemberView.xaml.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\MemberView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\MemberView.xaml.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\MemberView.xaml.cs",
+              "RelativeToolTip": "Views\\MemberView.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T10:21:06.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TextBoxTheme.xaml",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Theme\\TextBoxTheme.xaml",
+              "RelativeDocumentMoniker": "Theme\\TextBoxTheme.xaml",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Theme\\TextBoxTheme.xaml",
+              "RelativeToolTip": "Theme\\TextBoxTheme.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T13:59:20.758Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "LoginView.xaml.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\LoginView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\LoginView.xaml.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\LoginView.xaml.cs",
+              "RelativeToolTip": "Views\\LoginView.xaml.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwEcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T14:14:27.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MemberViewModel.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\MemberViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MemberViewModel.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\MemberViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MemberViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T07:41:45.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T14:32:36.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "BoolToCommandConverter.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\BoolToCommandConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\BoolToCommandConverter.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\BoolToCommandConverter.cs",
+              "RelativeToolTip": "Converters\\BoolToCommandConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T07:19:47.284Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 29,
+              "Title": "PrnprojectContext.cs",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\PrnprojectContext.cs",
+              "RelativeDocumentMoniker": "Models\\PrnprojectContext.cs",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\PrnprojectContext.cs",
+              "RelativeToolTip": "Models\\PrnprojectContext.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T14:26:18.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
               "Title": "ParticipationClassification.cs",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\ParticipationClassification.cs",
               "RelativeDocumentMoniker": "Models\\ParticipationClassification.cs",
               "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\ParticipationClassification.cs",
               "RelativeToolTip": "Models\\ParticipationClassification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T15:22:54.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 31,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-18T06:19:22.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
               "Title": "ChatViewModel.cs",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\ChatViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ChatViewModel.cs",
@@ -344,48 +737,22 @@
               "RelativeToolTip": "ViewModels\\ChatViewModel.cs",
               "ViewState": "AgIAAHYAAAAAAAAAAAAqwIgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T05:31:27.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T05:31:27.705Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Club.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\Club.cs",
-              "RelativeDocumentMoniker": "Models\\Club.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\Club.cs",
-              "RelativeToolTip": "Models\\Club.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T15:29:24.193Z"
+              "DocumentIndex": 37,
+              "Title": "PRN_SQL.sql",
+              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\PRN_SQL.sql",
+              "RelativeDocumentMoniker": "PRN_SQL.sql",
+              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\PRN_SQL.sql",
+              "RelativeToolTip": "PRN_SQL.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-24T15:36:08.803Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-18T06:19:22.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HomeView.xaml",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\HomeView.xaml",
-              "RelativeDocumentMoniker": "Views\\HomeView.xaml",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\HomeView.xaml",
-              "RelativeToolTip": "Views\\HomeView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-16T08:36:58.563Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 41,
               "Title": "AuthService.cs",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthService.cs",
@@ -398,44 +765,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 34,
-              "Title": "User.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAIA1wBcAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T15:11:30.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MemberViewModel.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\MemberViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\MemberViewModel.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\MemberViewModel.cs",
-              "RelativeToolTip": "ViewModels\\MemberViewModel.cs",
-              "ViewState": "AgIAAPwAAAAAAAAAAAAYwBwBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T07:41:45.031Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "HomeViewModel.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\HomeViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\HomeViewModel.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\HomeViewModel.cs",
-              "RelativeToolTip": "ViewModels\\HomeViewModel.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAD4v0UAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T09:04:51.32Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "UserNotification.cs",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\UserNotification.cs",
               "RelativeDocumentMoniker": "Models\\UserNotification.cs",
@@ -443,98 +772,11 @@
               "RelativeToolTip": "Models\\UserNotification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T14:37:07.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T14:37:07.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MemberView.xaml.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\MemberView.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\MemberView.xaml.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\MemberView.xaml.cs",
-              "RelativeToolTip": "Views\\MemberView.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwCcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T10:21:06.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EventView.xaml",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\EventView.xaml",
-              "RelativeDocumentMoniker": "Views\\EventView.xaml",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\EventView.xaml",
-              "RelativeToolTip": "Views\\EventView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-20T10:18:37.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "AssemblyInfo.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\AssemblyInfo.cs",
-              "RelativeToolTip": "AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T14:11:09.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MemberView.xaml",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\MemberView.xaml",
-              "RelativeDocumentMoniker": "Views\\MemberView.xaml",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\MemberView.xaml",
-              "RelativeToolTip": "Views\\MemberView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-20T10:18:03.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TextBoxTheme.xaml",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Theme\\TextBoxTheme.xaml",
-              "RelativeDocumentMoniker": "Theme\\TextBoxTheme.xaml",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Theme\\TextBoxTheme.xaml",
-              "RelativeToolTip": "Theme\\TextBoxTheme.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-19T13:59:20.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "LoginView.xaml.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\LoginView.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\LoginView.xaml.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\LoginView.xaml.cs",
-              "RelativeToolTip": "Views\\LoginView.xaml.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwEcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T14:14:27.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "LoginView.xaml",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\LoginView.xaml",
-              "RelativeDocumentMoniker": "Views\\LoginView.xaml",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\LoginView.xaml",
-              "RelativeToolTip": "Views\\LoginView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-19T14:13:15.138Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "RegisterView.xaml.cs",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\RegisterView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\RegisterView.xaml.cs",
@@ -546,20 +788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeView.xaml.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\HomeView.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\HomeView.xaml.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\HomeView.xaml.cs",
-              "RelativeToolTip": "Views\\HomeView.xaml.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwAoAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T08:36:41.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "RolePermissionToVisibilityConverter.cs",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\RolePermissionToVisibilityConverter.cs",
               "RelativeDocumentMoniker": "Converters\\RolePermissionToVisibilityConverter.cs",
@@ -571,19 +800,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "NotificationViewModel.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\NotificationViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\NotificationViewModel.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\NotificationViewModel.cs",
-              "RelativeToolTip": "ViewModels\\NotificationViewModel.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAtwFEAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T15:45:33.518Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 44,
               "Title": "UserTypeToRoleConverter.cs",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\UserTypeToRoleConverter.cs",
               "RelativeDocumentMoniker": "Converters\\UserTypeToRoleConverter.cs",
@@ -595,31 +812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "PrnprojectContext.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\PrnprojectContext.cs",
-              "RelativeDocumentMoniker": "Models\\PrnprojectContext.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\PrnprojectContext.cs",
-              "RelativeToolTip": "Models\\PrnprojectContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwNoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T14:26:18.695Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "BoolToCommandConverter.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\BoolToCommandConverter.cs",
-              "RelativeDocumentMoniker": "Converters\\BoolToCommandConverter.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\BoolToCommandConverter.cs",
-              "RelativeToolTip": "Converters\\BoolToCommandConverter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T07:19:47.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 39,
               "Title": "BoolToStringConverter.cs",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\BoolToStringConverter.cs",
               "RelativeDocumentMoniker": "Converters\\BoolToStringConverter.cs",
@@ -627,51 +820,11 @@
               "RelativeToolTip": "Converters\\BoolToStringConverter.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAkwAYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T07:19:08.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T07:19:08.539Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "BoolToVisibilityConverter.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\BoolToVisibilityConverter.cs",
-              "RelativeDocumentMoniker": "Converters\\BoolToVisibilityConverter.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\BoolToVisibilityConverter.cs",
-              "RelativeToolTip": "Converters\\BoolToVisibilityConverter.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAkwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T14:29:09.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "InverseBoolConverter.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\InverseBoolConverter.cs",
-              "RelativeDocumentMoniker": "Converters\\InverseBoolConverter.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\InverseBoolConverter.cs",
-              "RelativeToolTip": "Converters\\InverseBoolConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T07:19:33.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "InverseBoolToVisibilityConverter.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\InverseBoolToVisibilityConverter.cs",
-              "RelativeDocumentMoniker": "Converters\\InverseBoolToVisibilityConverter.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Converters\\InverseBoolToVisibilityConverter.cs",
-              "RelativeToolTip": "Converters\\InverseBoolToVisibilityConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAwwBkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T14:29:34.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 46,
               "Title": "XamlReader.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs",
               "ToolTip": "C:\\Users\\DELL\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs",
@@ -681,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 45,
               "Title": "PRN212_Project.csproj",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\PRN212_Project.csproj",
               "RelativeDocumentMoniker": "PRN212_Project.csproj",
@@ -694,19 +847,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAYwBUAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T15:46:51.504Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 38,
               "Title": "App.xaml",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -718,7 +859,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 47,
               "Title": "HomeTheme.xaml",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Theme\\HomeTheme.xaml",
               "RelativeDocumentMoniker": "Theme\\HomeTheme.xaml",
@@ -730,20 +871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-19T13:55:36.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 32,
               "Title": "Event.cs",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Models\\Event.cs",
               "RelativeDocumentMoniker": "Models\\Event.cs",
@@ -751,37 +879,11 @@
               "RelativeToolTip": "Models\\Event.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAA3wBoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T15:21:54.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T15:21:54.684Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T14:33:18.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T14:32:36.11Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 48,
               "Title": "ResourcePart.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
               "ToolTip": "C:\\Users\\DELL\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
@@ -791,20 +893,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EventView.xaml.cs",
-              "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\EventView.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\EventView.xaml.cs",
-              "ToolTip": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\Views\\EventView.xaml.cs",
-              "RelativeToolTip": "Views\\EventView.xaml.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwD8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T10:21:00.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 49,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",

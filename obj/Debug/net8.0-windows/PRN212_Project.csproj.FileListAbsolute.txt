@@ -167,6 +167,12 @@ D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\refint\PRN212_
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project.pdb
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project.genruntimeconfig.cache
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\ref\PRN212_Project.dll
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ChatView.g.cs
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\NotificationView.g.cs
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ReportView.g.cs
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ChatView.baml
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\NotificationView.baml
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ReportView.baml
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\bin\Debug\net8.0-windows\PRN212_Project.exe
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\bin\Debug\net8.0-windows\appsettings.json
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\bin\Debug\net8.0-windows\PRN212_Project.deps.json
@@ -308,22 +314,28 @@ H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-wind
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Theme\HomeTheme.baml
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Theme\TextBoxTheme.baml
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\MainWindow.g.cs
+H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\ChatView.g.cs
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\EventView.g.cs
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\HomeView.g.cs
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\LoginView.g.cs
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\MemberView.g.cs
+H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\NotificationView.g.cs
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\RegisterView.g.cs
+H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\ReportView.g.cs
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\App.g.cs
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\PRN212_Project_MarkupCompile.cache
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\PRN212_Project_MarkupCompile.lref
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\App.baml
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\MainWindow.baml
+H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\ChatView.baml
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\EventView.baml
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\HomeView.baml
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\LoginView.baml
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\MemberView.baml
+H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\NotificationView.baml
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\RegisterView.baml
+H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\Views\ReportView.baml
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\PRN212_Project.g.resources
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\PRN212_Project.GeneratedMSBuildEditorConfig.editorconfig
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\PRN212_Project.AssemblyInfoInputs.cache
@@ -336,9 +348,3 @@ H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-wind
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\PRN212_Project.pdb
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\PRN212_Project.genruntimeconfig.cache
 H:\FPT aint shit\PRN212\FinalProject\PRN212_ClubManagement\obj\Debug\net8.0-windows\ref\PRN212_Project.dll
-D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ChatView.g.cs
-D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\NotificationView.g.cs
-D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ReportView.g.cs
-D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ChatView.baml
-D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\NotificationView.baml
-D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\ReportView.baml
