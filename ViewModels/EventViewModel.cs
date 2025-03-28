@@ -383,7 +383,7 @@ namespace PRN212_Project.ViewModels
         private void ViewRegistrations(Event selectedEvent)
         {
             // Only allow roles 1, 2, and 3 to view registrations
-            if (_currentUser.RoleId > 3 || _currentUser.RoleId != 5)
+            if (_currentUser.RoleId > 3 && _currentUser.RoleId != 5)
             {
                 MessageBox.Show("You are not authorized to view event registrations.",
                     "Unauthorized",
