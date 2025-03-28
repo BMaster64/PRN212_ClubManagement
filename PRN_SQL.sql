@@ -156,165 +156,32 @@ SELECT CONCAT(ClubName, ' General'), ClubId FROM Club;
 -- INSERT SAMPLE DATA
 -- =============================
 
--- Insert Club Data
+-- Insert Clubs
 INSERT INTO Club (ClubName, Description)
 VALUES 
-('Chess Club', 'Strategic board games'),
-('Coding Club', 'Programming and software development');
+('Computer Science Club', 'A club for tech enthusiasts and programmers'),
+('Debate Society', 'A forum for intellectual discourse and public speaking'),
+('Environmental Action Group', 'Promoting sustainability and environmental awareness');
 
--- Insert User Data
+-- Insert Users
 INSERT INTO [User] (StudentId, FullName, Username, Password, RoleId, ClubId)
 VALUES 
-('S001', 'John Doe', 'johndoe', 'password123', 1, 1),
-('S002', 'Jane Smith', 'janesmith', 'password123', 2, 1),
-('S003', 'Emily Johnson', 'emilyj', 'password123', 3, 2);
+('CS001', 'Alex Johnson', 'alex.president', '123', 1, 1),
+('CS002', 'Emma Rodriguez', 'emma.vp', '123', 2, 1),
+('CS003', 'Michael Chen', 'michael.secretary', '123', 3, 1),
+('CS004', 'Sarah Kim', 'sarah.member', '123', 4, 1),
+('DS001', 'Ryan Thompson', 'ryan.president', '123', 1, 2),
+('DS002', 'Olivia Martinez', 'olivia.vp', '123', 2, 2),
+('DS003', 'Daniel Park', 'daniel.secretary', '123', 3, 2),
+('DS004', 'Isabella Wong', 'isabella.member', '123', 4, 2),
+('EA001', 'Sophia Lee', 'sophia.president', '123', 1, 3),
+('EA002', 'Ethan Kumar', 'ethan.vp', '123', 2, 3),
+('EA003', 'Ava Patel', 'ava.secretary', '123', 3, 3),
+('EA004', 'Noah Garcia', 'noah.member', '123', 4, 3);
 
--- Insert Event Data
-INSERT INTO [Event] (EventName, StartTime, EndTime, Location, Description, Status, ClubId)
+-- Sample Events for each Club
+INSERT INTO Event (EventName, StartTime, EndTime, Location, Description, Status, ClubId)
 VALUES 
-('Hackathon 2024', '2024-07-01 09:00:00', '2024-07-02 18:00:00', 'Tech Innovation Center', '24-hour coding competition with exciting prizes', 'Upcoming', 2),
-('Cybersecurity Seminar', '2024-05-05 14:00:00', '2024-05-05 16:30:00', 'Computer Science Building', 'Expert talk on latest cybersecurity trends', 'Upcoming', 2),
-('Programming Workshop', '2024-03-20 15:00:00', '2024-03-20 17:00:00', 'Computer Lab', 'Introductory Python programming session', 'Completed', 2),
-('Football Tournament', '2025-05-10 09:00:00', '2025-05-10 17:00:00', 'Main Hall', 'Annual football competition', 'Scheduled', 1),
-('Annual Sports Day', '2025-05-15 09:00:00', '2024-05-15 17:00:00', 'University Stadium', 'Exciting day of inter-club sports competitions', 'Scheduled', 1),
-('Football Tournament', '2025-06-22 13:00:00', '2024-06-23 18:00:00', 'Main Sports Ground', 'Weekend football championship for club members', 'Scheduled', 1),
-('Fitness Workshop', '2025-04-10 16:00:00', '2024-04-10 18:00:00', 'University Gym', 'Professional fitness training and nutrition seminar', 'Scheduled', 1);
-
--- Insert Event Registration
-INSERT INTO EventRegistration (EventId, StudentId, Status)
-VALUES 
-(1, 'S001', 'Registered'),
-(1, 'S002', 'Attended');
-
--- Insert Notification
-INSERT INTO Notification (Title, Content, SenderId)
-VALUES 
-('Event Reminder', 'The chess tournament is this Saturday!', 'HE323211'),
-('Sports Day Preparation', 'All members, please prepare for the upcoming Sports Day!', 'HE323211'),
-('Hackathon Registration Open', 'Register now for our annual Hackathon 2024!', 'HE181222');
--- Insert User Notification
-INSERT INTO UserNotification (NotificationId, StudentId, IsRead, ClubId)
-VALUES 
-(1, 'HE123123', 0, 1),
-(1, 'HE132322', 0, 1),
-(1, 'HE323211', 0, 1),
-(1, 'HE545454', 0, 1),
-(2, 'HE123123', 0, 1),
-(2, 'HE132322', 0, 1),
-(2, 'HE323211', 0, 1),
-(2, 'HE545454', 0, 1);
-
--- Insert Report
-INSERT INTO Report (Title, Content, Status, SenderId, ClubId) VALUES
-('Club Budget Proposal', 'Detailed budget plan for sports equipment and training', 'Pending', 'HE323211', 1),
-('IT Infrastructure Upgrade', 'Proposal for new computer lab equipment', 'Pending', 'HE323211', 1);
-
-INSERT INTO UserReport (ReportId, StudentId, IsRead, ClubId) VALUES
-(1, 'HE123123', 0, 1),
-(1, 'HE132322', 0, 1),
-(2, 'HE123123', 0, 1),
-(2, 'HE132322', 0, 1);
--- =============================
--- QUERIES
--- =============================
-
--- 1. Get All Events for a Club
-SELECT * 
-FROM Event 
-WHERE ClubId = 1;
-
--- 2. Get All Event Registrations
-SELECT 
-    E.EventName, 
-    R.Status, 
-    U.FullName
-FROM 
-    EventRegistration R
-JOIN 
-    Event E ON R.EventId = E.EventId
-JOIN 
-    [User] U ON R.StudentId = U.StudentId;
-
--- 3. Get Pending Reports
-SELECT 
-    R.Title, 
-    R.Content, 
-    S.FullName AS Sender, 
-    RCV.FullName AS Receiver
-FROM 
-    Report R
-JOIN 
-    [User] S ON R.SenderId = S.StudentId
-JOIN 
-    [User] RCV ON R.ReceiverId = RCV.StudentId
-WHERE 
-    R.Status = 'Pending';
-
--- 4. Get Notifications for a Club
-SELECT 
-    N.Title, 
-    N.Content, 
-    U.FullName AS Sender
-FROM 
-    Notification N
-JOIN 
-    [User] U ON N.SenderId = U.StudentId;
-
--- 5. Get Participation Statistics
-SELECT 
-    PC.StudentId, 
-    U.FullName, 
-    PC.Semester, 
-    PC.Year, 
-    PC.TotalEventsParticipated, 
-    PC.TotalEvents,
-    (PC.TotalEventsParticipated * 1.0 / NULLIF(PC.TotalEvents, 0)) * 100 AS ParticipationRate
-FROM 
-    ParticipationClassification PC
-JOIN 
-    [User] U ON PC.StudentId = U.StudentId;
-
--- 6. Approve Report
-UPDATE Report
-SET Status = 'Approved'
-WHERE ReportId = 1;
-
--- 7. Delete Report
-DELETE FROM Report
-WHERE ReportId = 1;
-
--- 8. Get Users in a Club
-SELECT 
-    U.StudentId,
-    U.FullName,
-    U.Username
-FROM 
-    [User] U
-WHERE 
-    U.ClubId = 1;
-
--- 9. Get Club Participation Rate
-SELECT 
-    U.FullName,
-    (PC.TotalEventsParticipated * 1.0 / NULLIF(PC.TotalEvents, 0)) * 100 AS ParticipationRate
-FROM 
-    ParticipationClassification PC
-JOIN 
-    [User] U ON PC.StudentId = U.StudentId
-WHERE 
-    U.ClubId = 1;
-
--- 10. Get All Reports Sent by a User
-SELECT 
-    R.Title,
-    R.Content,
-    R.CreatedAt,
-    R.Status
-FROM 
-    Report R
-WHERE 
-    R.SenderId = 'S001';
-
--- =============================
--- END OF FILE
--- =============================
+('Hackathon 2024', '2024-06-15 09:00:00', '2024-06-16 18:00:00', 'University Tech Center', 'Annual programming competition', 'Upcoming', 1),
+('Inter-College Debate Competition', '2024-07-20 14:00:00', '2024-07-21 20:00:00', 'Main Auditorium', 'Regional debate tournament', 'Upcoming', 2),
+('Beach Cleanup Drive', '2024-08-10 07:00:00', '2024-08-10 12:00:00', 'City Beach', 'Community environmental initiative', 'Upcoming', 3);

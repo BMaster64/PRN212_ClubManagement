@@ -346,3 +346,5 @@ D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\refint\PRN212_
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project.pdb
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project.genruntimeconfig.cache
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\ref\PRN212_Project.dll
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\EventRegistrationsView.baml
+D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\EventRegistrationsView.g.cs

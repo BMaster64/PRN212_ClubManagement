@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\Document\Eppede\PRN212\PRN212_Project\App.xaml
-13-78421018
+14-26420530
 
-49-1420333057
+52-542355877
 2351070964747
-MainWindow.xaml;Theme\HomeTheme.xaml;Theme\TextBoxTheme.xaml;Views\ChatView.xaml;Views\ClubRequestsView.xaml;Views\ClubView.xaml;Views\EventView.xaml;Views\HomeView.xaml;Views\LoginView.xaml;Views\MemberView.xaml;Views\NotificationView.xaml;Views\RegisterView.xaml;Views\ReportView.xaml;
+MainWindow.xaml;Theme\HomeTheme.xaml;Theme\TextBoxTheme.xaml;Views\ChatView.xaml;Views\ClubRequestsView.xaml;Views\ClubView.xaml;Views\EventRegistrationsView.xaml;Views\EventView.xaml;Views\HomeView.xaml;Views\LoginView.xaml;Views\MemberView.xaml;Views\NotificationView.xaml;Views\RegisterView.xaml;Views\ReportView.xaml;
 
 False
 

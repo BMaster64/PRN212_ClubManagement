@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.EntityFrameworkCore;
 using PRN212_Project.Models;
+using PRN212_Project.Views;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows;
@@ -55,7 +56,9 @@ namespace PRN212_Project.ViewModels
         public IAsyncRelayCommand UpdateEventCommand { get; }
         public IAsyncRelayCommand DeleteEventCommand { get; }
         public IRelayCommand StartEditCommand { get; }
-
+        public IAsyncRelayCommand RegisterForEventCommand { get; }
+        public IAsyncRelayCommand CancelRegistrationCommand { get; }
+        public IRelayCommand<Event> ViewRegistrationsCommand { get; }
         public int CurrentUserRoleId { get; set; }
 
         public EventViewModel(User currentUser)
@@ -70,6 +73,10 @@ namespace PRN212_Project.ViewModels
             // Initialize commands
             LoadEventsCommand = new AsyncRelayCommand(LoadEventsAsync);
             RefreshCommand = new AsyncRelayCommand(LoadEventsAsync);
+            RegisterForEventCommand = new AsyncRelayCommand<Event>(RegisterForEventAsync);
+            CancelRegistrationCommand = new AsyncRelayCommand<Event>(CancelRegistrationAsync);
+            ViewRegistrationsCommand = new RelayCommand<Event>(ViewRegistrations);
+
             ShowCreateFormCommand = new RelayCommand(() =>
             {
                 if (CanManageEvents)
@@ -124,6 +131,7 @@ namespace PRN212_Project.ViewModels
             {
                 IsLoading = true;
                 var clubEvents = await _context.Events
+                    .Include(e => e.EventRegistrations)
                     .Where(e => e.ClubId == _currentUser.ClubId)
                     .OrderByDescending(e => e.StartTime)
                     .ToListAsync();
@@ -131,7 +139,8 @@ namespace PRN212_Project.ViewModels
                 Events.Clear();
                 foreach (var evt in clubEvents)
                 {
-                    Events.Add(evt);
+                    var extendedEvent = new ExtendedEvent(evt, _currentUser);
+                    Events.Add(extendedEvent);
                 }
             }
             catch (Exception ex)
@@ -327,5 +336,137 @@ namespace PRN212_Project.ViewModels
                     MessageBoxImage.Error);
             }
         }
+        private async Task RegisterForEventAsync(Event selectedEvent)
+        {
+            if (selectedEvent == null) return;
+
+            try
+            {
+                // Check if user is already registered
+                var existingRegistration = await _context.EventRegistrations
+                    .FirstOrDefaultAsync(er =>
+                        er.EventId == selectedEvent.EventId &&
+                        er.StudentId == _currentUser.StudentId);
+
+                if (existingRegistration != null)
+                {
+                    MessageBox.Show("You are already registered for this event.",
+                        "Registration",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Information);
+                    return;
+                }
+
+                // Create new registration
+                var newRegistration = new EventRegistration
+                {
+                    EventId = selectedEvent.EventId,
+                    StudentId = _currentUser.StudentId,
+                    Status = "Registered" // You can customize this status
+                };
+
+                _context.EventRegistrations.Add(newRegistration);
+                await _context.SaveChangesAsync();
+
+                MessageBox.Show("Successfully registered for the event!",
+                    "Registration",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+
+                // Refresh events to update registration status
+                await LoadEventsAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error registering for event: {ex.Message}",
+                    "Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
+        }
+
+        private async Task CancelRegistrationAsync(Event selectedEvent)
+        {
+            if (selectedEvent == null) return;
+
+            try
+            {
+                var existingRegistration = await _context.EventRegistrations
+                    .FirstOrDefaultAsync(er =>
+                        er.EventId == selectedEvent.EventId &&
+                        er.StudentId == _currentUser.StudentId);
+
+                if (existingRegistration == null)
+                {
+                    MessageBox.Show("You are not registered for this event.",
+                        "Registration",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Information);
+                    return;
+                }
+
+                _context.EventRegistrations.Remove(existingRegistration);
+                await _context.SaveChangesAsync();
+
+                MessageBox.Show("Registration cancelled successfully.",
+                    "Registration",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+
+                // Refresh events to update registration status
+                await LoadEventsAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error cancelling registration: {ex.Message}",
+                    "Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
+        }
+        private void ViewRegistrations(Event selectedEvent)
+        {
+            // Only allow roles 1, 2, and 3 to view registrations
+            if (_currentUser.RoleId > 3)
+            {
+                MessageBox.Show("You are not authorized to view event registrations.",
+                    "Unauthorized",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning);
+                return;
+            }
+
+            var registrationsView = new EventRegistrationsView
+            {
+                DataContext = new EventRegistrationViewModel(_currentUser, selectedEvent)
+            };
+            registrationsView.Show();
+        }
     }
+    public class ExtendedEvent : Event
+    {
+        public bool IsRegistered { get; }
+        public int RegisteredUsersCount { get; }
+
+        public ExtendedEvent(Event baseEvent, User currentUser)
+        {
+            // Copy all properties from the base event
+            EventId = baseEvent.EventId;
+            EventName = baseEvent.EventName;
+            StartTime = baseEvent.StartTime;
+            EndTime = baseEvent.EndTime;
+            Location = baseEvent.Location;
+            Description = baseEvent.Description;
+            Status = baseEvent.Status;
+            ClubId = baseEvent.ClubId;
+            Club = baseEvent.Club;
+            EventRegistrations = baseEvent.EventRegistrations;
+
+            // Add new properties
+            IsRegistered = EventRegistrations
+                .Any(er => er.StudentId == currentUser.StudentId);
+            RegisteredUsersCount = EventRegistrations.Count;
+        }
+    }
+
 }

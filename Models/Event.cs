@@ -24,4 +24,11 @@ public partial class Event
     public virtual Club Club { get; set; } = null!;
 
     public virtual ICollection<EventRegistration> EventRegistrations { get; set; } = new List<EventRegistration>();
+    public bool IsUserRegistered(User user)
+    {
+        return EventRegistrations
+            .Any(er => er.StudentId == user.StudentId);
+    }
+
+    public int RegisteredUsersCount => EventRegistrations.Count;
 }

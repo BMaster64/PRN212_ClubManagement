@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\PRN212_Project.csproj": {}
+    "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\PRN212_Project.csproj": {}
   },
   "projects": {
-    "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\PRN212_Project.csproj": {
+    "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\PRN212_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\PRN212_Project.csproj",
+        "projectUniqueName": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\PRN212_Project.csproj",
         "projectName": "PRN212_Project",
-        "projectPath": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\PRN212_Project.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "H:\\FPT aint shit\\PRN212\\FinalProject\\PRN212_ClubManagement\\obj\\",
+        "projectPath": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\PRN212_Project.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,8 +39,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -95,7 +89,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
