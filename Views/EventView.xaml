@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:PRN212_Project.Views"
              xmlns:viewmodels="clr-namespace:PRN212_Project.ViewModels"
              xmlns:converters="clr-namespace:PRN212_Project.Converters"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="700">
 
@@ -201,10 +202,26 @@
                     <TextBox Grid.Row="2" Text="{Binding EventName, UpdateSourceTrigger=PropertyChanged}" Padding="5" Margin="0,0,0,15" />
 
                     <TextBlock Grid.Row="3" Text="Start Time:" FontWeight="SemiBold" Margin="0,0,0,5" />
-                    <DatePicker Grid.Row="4" SelectedDate="{Binding StartTime, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
+                    <DatePicker Grid.Row="4" 
+                                SelectedDate="{Binding StartTime, UpdateSourceTrigger=PropertyChanged}" 
+                                Margin="0,0,0,15"
+                                DisplayDateStart="{x:Static sys:DateTime.Today}" />
 
                     <TextBlock Grid.Row="5" Text="End Time:" FontWeight="SemiBold" Margin="0,0,0,5" />
-                    <DatePicker Grid.Row="6" SelectedDate="{Binding EndTime, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
+                    <DatePicker Grid.Row="6" 
+                                SelectedDate="{Binding EndTime, UpdateSourceTrigger=PropertyChanged}" 
+                                Margin="0,0,0,15"
+                                DisplayDateStart="{Binding StartTime}">
+                        <DatePicker.Style>
+                            <Style TargetType="DatePicker">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding StartTime}" Value="{x:Null}">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DatePicker.Style>
+                    </DatePicker>
 
                     <TextBlock Grid.Row="7" Text="Location:" FontWeight="SemiBold" Margin="0,0,0,5" />
                     <TextBox Grid.Row="8" Text="{Binding Location, UpdateSourceTrigger=PropertyChanged}" Padding="5" Margin="0,0,0,15" />
@@ -255,10 +272,26 @@
                     <TextBox Grid.Row="2" Text="{Binding EventName, UpdateSourceTrigger=PropertyChanged}" Padding="5" Margin="0,0,0,15" />
 
                     <TextBlock Grid.Row="3" Text="Start Time:" FontWeight="SemiBold" Margin="0,0,0,5" />
-                    <DatePicker Grid.Row="4" SelectedDate="{Binding StartTime, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
+                    <DatePicker Grid.Row="4" 
+                                SelectedDate="{Binding StartTime, UpdateSourceTrigger=PropertyChanged}" 
+                                Margin="0,0,0,15"
+                                DisplayDateStart="{x:Static sys:DateTime.Today}" />
 
                     <TextBlock Grid.Row="5" Text="End Time:" FontWeight="SemiBold" Margin="0,0,0,5" />
-                    <DatePicker Grid.Row="6" SelectedDate="{Binding EndTime, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
+                    <DatePicker Grid.Row="6" 
+                                SelectedDate="{Binding EndTime, UpdateSourceTrigger=PropertyChanged}" 
+                                Margin="0,0,0,15"
+                                DisplayDateStart="{Binding StartTime}">
+                        <DatePicker.Style>
+                            <Style TargetType="DatePicker">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding StartTime}" Value="{x:Null}">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DatePicker.Style>
+                    </DatePicker>
 
                     <TextBlock Grid.Row="7" Text="Location:" FontWeight="SemiBold" Margin="0,0,0,5" />
                     <TextBox Grid.Row="8" Text="{Binding Location, UpdateSourceTrigger=PropertyChanged}" Padding="5" Margin="0,0,0,15" />
