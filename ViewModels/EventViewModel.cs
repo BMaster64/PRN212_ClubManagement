@@ -68,7 +68,7 @@ namespace PRN212_Project.ViewModels
             Events = new ObservableCollection<Event>();
 
             // Set permissions based on user role
-            CanManageEvents = currentUser.RoleId <= 3;
+            CanManageEvents = currentUser.RoleId <= 3 || currentUser.RoleId == 5;
 
             // Initialize commands
             LoadEventsCommand = new AsyncRelayCommand(LoadEventsAsync);
@@ -107,7 +107,6 @@ namespace PRN212_Project.ViewModels
                 }
             });
             UpdateEventCommand = new AsyncRelayCommand(UpdateEventAsync);
-            DeleteEventCommand = new AsyncRelayCommand(DeleteEventAsync);
             StartEditCommand = new RelayCommand<Event>(StartEdit);
 
             // Load events on initialization
@@ -292,50 +291,7 @@ namespace PRN212_Project.ViewModels
             }
         }
 
-        private async Task DeleteEventAsync()
-        {
-            if (SelectedEvent == null) return;
-
-            try
-            {
-                var result = MessageBox.Show("Are you sure you want to delete this event?",
-                    "Confirm Deletion",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Question);
-
-                if (result == MessageBoxResult.No) return;
-
-                var eventToDelete = await _context.Events
-                    .FirstOrDefaultAsync(e => e.EventId == SelectedEvent.EventId);
-
-                if (eventToDelete == null)
-                {
-                    MessageBox.Show("Event not found.",
-                        "Error",
-                        MessageBoxButton.OK,
-                        MessageBoxImage.Error);
-                    return;
-                }
-
-                _context.Events.Remove(eventToDelete);
-                await _context.SaveChangesAsync();
-
-                MessageBox.Show("Event deleted successfully!",
-                    "Success",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Information);
-
-                ResetForm();
-                await LoadEventsAsync();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error deleting event: {ex.Message}",
-                    "Error",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Error);
-            }
-        }
+        
         private async Task RegisterForEventAsync(Event selectedEvent)
         {
             if (selectedEvent == null) return;
@@ -427,7 +383,7 @@ namespace PRN212_Project.ViewModels
         private void ViewRegistrations(Event selectedEvent)
         {
             // Only allow roles 1, 2, and 3 to view registrations
-            if (_currentUser.RoleId > 3)
+            if (_currentUser.RoleId > 3 || _currentUser.RoleId != 5)
             {
                 MessageBox.Show("You are not authorized to view event registrations.",
                     "Unauthorized",

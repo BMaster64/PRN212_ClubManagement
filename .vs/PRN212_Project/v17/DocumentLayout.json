@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|d:\\document\\eppede\\prn212\\prn212_project\\views\\eventregistrationsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\eventregistrationsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\views\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\viewmodels\\clubviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\clubviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\viewmodels\\eventviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\eventviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\views\\eventview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\eventview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|d:\\document\\eppede\\prn212\\prn212_project\\views\\eventregistrationsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\eventregistrationsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -19,15 +47,11 @@
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\clubview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|d:\\document\\eppede\\prn212\\prn212_project\\views\\eventregistrationsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\views\\eventregistrationsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\eventregistrationsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|d:\\document\\eppede\\prn212\\prn212_project\\viewmodels\\eventviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\eventviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|d:\\document\\eppede\\prn212\\prn212_project\\viewmodels\\eventregistrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\viewmodels\\eventregistrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\eventregistrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -35,11 +59,11 @@
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|d:\\document\\eppede\\prn212\\prn212_project\\models\\eventregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\models\\eventregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:models\\eventregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|d:\\document\\eppede\\prn212\\prn212_project\\models\\clubregistrationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\models\\clubregistrationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:models\\clubregistrationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -59,14 +83,6 @@
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\clubrequestsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\viewmodels\\clubviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\clubviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\views\\clubrequestsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\clubrequestsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -79,24 +95,12 @@
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\clubview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\views\\registerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\registerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\converters\\requeststatustovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -194,10 +198,6 @@
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\views\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:views\\homeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|D:\\Document\\Eppede\\PRN212\\PRN212_Project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{DE10241A-006E-444F-AEA9-8F58DCB86736}|PRN212_Project.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -260,7 +260,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 22,
           "Children": [
             {
               "$type": "Bookmark",
@@ -332,68 +332,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EventRegistrationsView.xaml",
-              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\EventRegistrationsView.xaml",
-              "RelativeDocumentMoniker": "Views\\EventRegistrationsView.xaml",
-              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\EventRegistrationsView.xaml",
-              "RelativeToolTip": "Views\\EventRegistrationsView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-28T03:34:50.845Z",
+              "DocumentIndex": 6,
+              "Title": "EventViewModel.cs",
+              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\EventViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\EventViewModel.cs",
+              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\EventViewModel.cs",
+              "RelativeToolTip": "ViewModels\\EventViewModel.cs",
+              "ViewState": "AQIAAHMBAAAAAAAAAAAAAIEBAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T00:56:40.937Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "NotificationViewModel.cs",
-              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\NotificationViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\NotificationViewModel.cs",
-              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\NotificationViewModel.cs",
-              "RelativeToolTip": "ViewModels\\NotificationViewModel.cs",
-              "ViewState": "AQIAANcAAAAAAAAAAAAqwOwAAAAjAAAA",
+              "DocumentIndex": 4,
+              "Title": "HomeViewModel.cs",
+              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\HomeViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\HomeViewModel.cs",
+              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\HomeViewModel.cs",
+              "RelativeToolTip": "ViewModels\\HomeViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T15:45:33.518Z"
+              "WhenOpened": "2025-02-20T09:04:51.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChatViewModel.cs",
+              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\ChatViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ChatViewModel.cs",
+              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\ChatViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ChatViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T05:31:27.705Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ClubView.xaml",
-              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\ClubView.xaml",
-              "RelativeDocumentMoniker": "Views\\ClubView.xaml",
-              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\ClubView.xaml",
-              "RelativeToolTip": "Views\\ClubView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-27T14:25:58.972Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EventRegistrationViewModel.cs",
-              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\EventRegistrationViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\EventRegistrationViewModel.cs",
-              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\EventRegistrationViewModel.cs",
-              "RelativeToolTip": "ViewModels\\EventRegistrationViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFgAAAABAAAA",
+              "Title": "ClubViewModel.cs",
+              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\ClubViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ClubViewModel.cs",
+              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\ClubViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ClubViewModel.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAgwJEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T03:34:19.505Z",
+              "WhenOpened": "2025-03-27T14:35:33.342Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LoginView.xaml",
-              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\LoginView.xaml",
-              "RelativeDocumentMoniker": "Views\\LoginView.xaml",
-              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\LoginView.xaml",
-              "RelativeToolTip": "Views\\LoginView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-19T14:13:15.138Z",
+              "Title": "HomeView.xaml.cs",
+              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\HomeView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\HomeView.xaml.cs",
+              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\HomeView.xaml.cs",
+              "RelativeToolTip": "Views\\HomeView.xaml.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T08:36:41.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAYwC8AAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T14:16:09.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAA8wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T14:33:18.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "EventView.xaml",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\EventView.xaml",
               "RelativeDocumentMoniker": "Views\\EventView.xaml",
@@ -405,7 +435,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
+              "Title": "LoginView.xaml",
+              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\LoginView.xaml",
+              "RelativeDocumentMoniker": "Views\\LoginView.xaml",
+              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\LoginView.xaml",
+              "RelativeToolTip": "Views\\LoginView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T14:13:15.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EventRegistrationViewModel.cs",
+              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\EventRegistrationViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\EventRegistrationViewModel.cs",
+              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\EventRegistrationViewModel.cs",
+              "RelativeToolTip": "ViewModels\\EventRegistrationViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T03:34:19.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ClubView.xaml",
+              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\ClubView.xaml",
+              "RelativeDocumentMoniker": "Views\\ClubView.xaml",
+              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\ClubView.xaml",
+              "RelativeToolTip": "Views\\ClubView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-27T14:25:58.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EventRegistrationsView.xaml",
+              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\EventRegistrationsView.xaml",
+              "RelativeDocumentMoniker": "Views\\EventRegistrationsView.xaml",
+              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\EventRegistrationsView.xaml",
+              "RelativeToolTip": "Views\\EventRegistrationsView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-28T03:34:50.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "NotificationViewModel.cs",
+              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\NotificationViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\NotificationViewModel.cs",
+              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\NotificationViewModel.cs",
+              "RelativeToolTip": "ViewModels\\NotificationViewModel.cs",
+              "ViewState": "AQIAANcAAAAAAAAAAAAqwOwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T15:45:33.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "ClubRequestsView.xaml",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\ClubRequestsView.xaml",
               "RelativeDocumentMoniker": "Views\\ClubRequestsView.xaml",
@@ -416,7 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "EventRegistrationsView.xaml.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\EventRegistrationsView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\EventRegistrationsView.xaml.cs",
@@ -424,24 +512,11 @@
               "RelativeToolTip": "Views\\EventRegistrationsView.xaml.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAkwBcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T03:36:26.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T03:36:26.458Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "HomeView.xaml.cs",
-              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\HomeView.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\HomeView.xaml.cs",
-              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\HomeView.xaml.cs",
-              "RelativeToolTip": "Views\\HomeView.xaml.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAYwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T08:36:41.983Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "PrnprojectContext.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Models\\PrnprojectContext.cs",
               "RelativeDocumentMoniker": "Models\\PrnprojectContext.cs",
@@ -453,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "NotificationView.xaml",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\NotificationView.xaml",
               "RelativeDocumentMoniker": "Views\\NotificationView.xaml",
@@ -464,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "Report.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Models\\Report.cs",
               "RelativeDocumentMoniker": "Models\\Report.cs",
@@ -476,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -488,20 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EventViewModel.cs",
-              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\EventViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\EventViewModel.cs",
-              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\EventViewModel.cs",
-              "RelativeToolTip": "ViewModels\\EventViewModel.cs",
-              "ViewState": "AQIAAKEBAAAAAAAAAAAqwLsBAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T00:56:40.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "ClubRegistrationRequest.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Models\\ClubRegistrationRequest.cs",
               "RelativeDocumentMoniker": "Models\\ClubRegistrationRequest.cs",
@@ -509,12 +571,11 @@
               "RelativeToolTip": "Models\\ClubRegistrationRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T02:58:21.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T02:58:21.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "EventRegistration.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Models\\EventRegistration.cs",
               "RelativeDocumentMoniker": "Models\\EventRegistration.cs",
@@ -522,12 +583,11 @@
               "RelativeToolTip": "Models\\EventRegistration.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAxwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T02:58:22.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T02:58:22.517Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Event.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Models\\Event.cs",
               "RelativeDocumentMoniker": "Models\\Event.cs",
@@ -535,12 +595,11 @@
               "RelativeToolTip": "Models\\Event.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAA7wCAAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T15:21:54.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T15:21:54.684Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "ReportViewModel.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\ReportViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ReportViewModel.cs",
@@ -552,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "EventView.xaml.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\EventView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\EventView.xaml.cs",
@@ -564,7 +623,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
@@ -576,19 +635,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "HomeViewModel.cs",
-              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\HomeViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\HomeViewModel.cs",
-              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\HomeViewModel.cs",
-              "RelativeToolTip": "ViewModels\\HomeViewModel.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAswDsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T09:04:51.32Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "ChatChannel.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Models\\ChatChannel.cs",
               "RelativeDocumentMoniker": "Models\\ChatChannel.cs",
@@ -600,7 +647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "ReportView.xaml.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\ReportView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ReportView.xaml.cs",
@@ -612,7 +659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "NotificationView.xaml.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\NotificationView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\NotificationView.xaml.cs",
@@ -624,7 +671,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "ReportView.xaml",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\ReportView.xaml",
               "RelativeDocumentMoniker": "Views\\ReportView.xaml",
@@ -635,7 +682,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "RegisterView.xaml",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\RegisterView.xaml",
               "RelativeDocumentMoniker": "Views\\RegisterView.xaml",
@@ -646,31 +693,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ClubViewModel.cs",
-              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\ClubViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ClubViewModel.cs",
-              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\ClubViewModel.cs",
-              "RelativeToolTip": "ViewModels\\ClubViewModel.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAYwH8AAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T14:35:33.342Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ChatViewModel.cs",
-              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\ChatViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ChatViewModel.cs",
-              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\ChatViewModel.cs",
-              "RelativeToolTip": "ViewModels\\ChatViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T05:31:27.705Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "ClubRequestsView.xaml.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\ClubRequestsView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ClubRequestsView.xaml.cs",
@@ -682,7 +705,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "ClubView.xaml.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\ClubView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ClubView.xaml.cs",
@@ -694,7 +717,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "LoginView.xaml.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\LoginView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\LoginView.xaml.cs",
@@ -706,7 +729,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "RegisterView.xaml.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\RegisterView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\RegisterView.xaml.cs",
@@ -718,31 +741,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\AuthService.cs",
-              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Services\\AuthService.cs",
-              "RelativeToolTip": "Services\\AuthService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T14:16:09.478Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAiwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T14:33:18.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "XamlReader.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs",
               "ToolTip": "C:\\Users\\DELL\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs [Read Only]",
@@ -752,7 +751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "HomeView.xaml",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\HomeView.xaml",
               "RelativeDocumentMoniker": "Views\\HomeView.xaml",
@@ -763,7 +762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "MemberViewModel.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\ViewModels\\MemberViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MemberViewModel.cs",
@@ -775,7 +774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "PRN212_Project.csproj",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\PRN212_Project.csproj",
               "RelativeDocumentMoniker": "PRN212_Project.csproj",
@@ -787,7 +786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "ParticipationClassification.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Models\\ParticipationClassification.cs",
               "RelativeDocumentMoniker": "Models\\ParticipationClassification.cs",
@@ -799,7 +798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "InverseBoolToVisibilityConverter.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Converters\\InverseBoolToVisibilityConverter.cs",
               "RelativeDocumentMoniker": "Converters\\InverseBoolToVisibilityConverter.cs",
@@ -811,7 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "RequestStatusToVisibilityConverter.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Converters\\RequestStatusToVisibilityConverter.cs",
               "RelativeDocumentMoniker": "Converters\\RequestStatusToVisibilityConverter.cs",
@@ -823,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "MemberView.xaml.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\MemberView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\MemberView.xaml.cs",
@@ -835,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "ChatView.xaml",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\ChatView.xaml",
               "RelativeDocumentMoniker": "Views\\ChatView.xaml",
@@ -846,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "MemberView.xaml",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\MemberView.xaml",
               "RelativeDocumentMoniker": "Views\\MemberView.xaml",
@@ -857,7 +856,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "ChatView.xaml.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Views\\ChatView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ChatView.xaml.cs",
@@ -869,7 +868,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "Club.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Models\\Club.cs",
               "RelativeDocumentMoniker": "Models\\Club.cs",
@@ -881,7 +880,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "InverseBoolConverter.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Converters\\InverseBoolConverter.cs",
               "RelativeDocumentMoniker": "Converters\\InverseBoolConverter.cs",
@@ -893,7 +892,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "BoolToVisibilityConverter.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\Converters\\BoolToVisibilityConverter.cs",
               "RelativeDocumentMoniker": "Converters\\BoolToVisibilityConverter.cs",
@@ -929,7 +928,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "D:\\Document\\Eppede\\PRN212\\PRN212_Project\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",

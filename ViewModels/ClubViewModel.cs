@@ -113,23 +113,29 @@ public partial class ClubViewModel : ObservableObject
             {
                 adminUser.ClubId = club.ClubId;
                 _dbContext.SaveChanges();
-                var currentMainWindow = Application.Current.MainWindow;
 
-                if (currentMainWindow is HomeView homeWindow)
+                // Find the current HomeView
+                HomeView currentHomeView = Application.Current.Windows
+                    .OfType<HomeView>()
+                    .FirstOrDefault();
+
+                if (currentHomeView != null)
                 {
-                    // Update the DataContext of the existing window
-                    homeWindow.DataContext = new HomeViewModel(adminUser);
+                    // Update the existing HomeView's DataContext
+                    currentHomeView.DataContext = new HomeViewModel(adminUser);
 
-                    // Show a message
-                    MessageBox.Show($"Now managing {club.ClubName}", "Club Management", MessageBoxButton.OK, MessageBoxImage.Information);
+                    // Bring the existing window to front
+                    currentHomeView.Activate();
                 }
                 else
                 {
-                    // If for some reason the main window is not a HomeView, create a new one
+                    // If no HomeView exists, create a new one
                     HomeView newHomeView = new HomeView();
                     newHomeView.DataContext = new HomeViewModel(adminUser);
                     newHomeView.Show();
                 }
+
+                MessageBox.Show($"Now managing {club.ClubName}", "Club Management", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
         catch (Exception ex)
@@ -137,6 +143,7 @@ public partial class ClubViewModel : ObservableObject
             MessageBox.Show($"Error managing club: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
+
     private void ExportToExcel()
     {
         try
