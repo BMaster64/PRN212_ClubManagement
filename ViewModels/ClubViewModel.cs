@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Win32;
 using PRN212_Project.Models;
 using PRN212_Project.Views;
 using System.Collections.ObjectModel;
@@ -10,6 +11,7 @@ public partial class ClubViewModel : ObservableObject
 {
     private readonly PrnprojectContext _dbContext;
     private readonly User _currentUser;
+    public IRelayCommand ExportToExcelCommand { get; }
 
     [ObservableProperty]
     private ObservableCollection<Club> _clubs;
@@ -22,6 +24,8 @@ public partial class ClubViewModel : ObservableObject
 
     public ClubViewModel(User currentUser)
     {
+        ExportToExcelCommand = new RelayCommand(ExportToExcel);
+
         _currentUser = currentUser;
         _dbContext = new PrnprojectContext();
         LoadClubs();
@@ -133,4 +137,36 @@ public partial class ClubViewModel : ObservableObject
             MessageBox.Show($"Error managing club: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
+    private void ExportToExcel()
+    {
+        try
+        {
+            // Open file dialog to choose save location
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Export Clubs to Excel",
+                FileName = $"Clubs_{DateTime.Now:yyyyMMdd}.xlsx"
+            };
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                // Export all clubs in the current collection
+                ExcelExportHelper.ExportClubsToExcel(Clubs, saveFileDialog.FileName);
+
+                MessageBox.Show("Clubs exported successfully!",
+                                "Export Successful",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Information);
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Error exporting clubs: {ex.Message}",
+                            "Export Error",
+                            MessageBoxButton.OK,
+                            MessageBoxImage.Error);
+        }
+    }
+
 }

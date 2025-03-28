@@ -21,6 +21,12 @@
         <!-- Header -->
         <StackPanel Orientation="Horizontal" Margin="10,50,0,0">
             <TextBlock Text="Club Management" FontSize="24" FontWeight="Bold" Margin="0,0,20,0"/>
+            <Button Content="Export to Excel" 
+            Command="{Binding ExportToExcelCommand}"
+            Style="{StaticResource NavButtonStyle}" 
+            Width="120" Height="30"
+            Margin="10,0,0,0"
+            Background="Green"/>
         </StackPanel>
 
         <!-- Club List -->

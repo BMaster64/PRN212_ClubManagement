@@ -348,3 +348,11 @@ D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\PRN212_Project
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\ref\PRN212_Project.dll
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\EventRegistrationsView.baml
 D:\Document\Eppede\PRN212\PRN212_Project\obj\Debug\net8.0-windows\Views\EventRegistrationsView.g.cs
+D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\ClosedXML.dll
+D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\RBush.dll
+D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+D:\Document\Eppede\PRN212\PRN212_Project\bin\Debug\net8.0-windows\System.IO.Packaging.dll

@@ -31,6 +31,12 @@
             Style="{StaticResource NavButtonStyle}" 
             Width="100" Height="30"
             Visibility="{Binding CanAddMembers, Converter={StaticResource BoolToVisibilityConverter}}" Background="DarkBlue"/>
+            <Button Content="Export to Excel" 
+            Command="{Binding ExportToExcelCommand}"
+            Style="{StaticResource NavButtonStyle}" 
+            Width="120" Height="30"
+            Margin="10,0,0,0"
+            Background="Green"/>
         </StackPanel>
 
         <!-- Member List -->

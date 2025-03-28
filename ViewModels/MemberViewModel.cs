@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Win32;
 using PRN212_Project.Models;
 using System;
 using System.Collections.Generic;
@@ -50,6 +51,7 @@ public partial class MemberViewModel : ObservableObject
     public IAsyncRelayCommand<User> DeleteMemberCommand { get; }
     public IAsyncRelayCommand SaveEditCommand { get; }
     public IRelayCommand CancelEditCommand { get; }
+    public IRelayCommand ExportToExcelCommand { get; }
     public MemberViewModel(User currentUser)
     {
         _currentUser = currentUser;
@@ -61,6 +63,7 @@ public partial class MemberViewModel : ObservableObject
 
         LoadMembersCommand = new AsyncRelayCommand(LoadMembersAsync);
         CreateMemberCommand = new AsyncRelayCommand(CreateMemberAsync);
+        ExportToExcelCommand = new RelayCommand(ExportToExcel);
         ShowCreateFormCommand = new RelayCommand(() =>
         {
             if (CanAddMembers)
@@ -290,6 +293,37 @@ public partial class MemberViewModel : ObservableObject
         catch (Exception ex)
         {
             MessageBox.Show($"Error disabling member: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+    }
+    private void ExportToExcel()
+    {
+        try
+        {
+            // Open file dialog to choose save location
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Export Members to Excel",
+                FileName = $"Club_Members_{DateTime.Now:yyyyMMdd}.xlsx"
+            };
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                // Export all members in the current collection
+                ExcelExportHelper.ExportMembersToExcel(Members, saveFileDialog.FileName);
+
+                MessageBox.Show("Members exported successfully!",
+                                "Export Successful",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Information);
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Error exporting members: {ex.Message}",
+                            "Export Error",
+                            MessageBoxButton.OK,
+                            MessageBoxImage.Error);
         }
     }
 
